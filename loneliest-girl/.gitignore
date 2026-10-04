@@ -1,0 +1,6 @@
+src/ly/*.pdf
+!src/ly/*.cropped.pdf
+src/ly/*.png
+src/*.aux
+src/*.log
+src/*.pdf

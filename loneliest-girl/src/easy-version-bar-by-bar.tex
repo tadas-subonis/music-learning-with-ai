@@ -1,0 +1,421 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=14mm,top=12mm,bottom=12mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\usepackage{graphicx,tikz,array,tabularx,enumitem,multicol,booktabs}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist{nosep,leftmargin=*}
+\frenchspacing
+\newcommand{\sh}{$\sharp$}
+\newcommand{\fl}{$\flat$}
+
+% ---------- headings
+\newcommand{\sect}[1]{\par\vspace{5pt}{\large\bfseries #1}\par\vspace{2pt}}
+
+% ---------- drill header
+\newcommand{\drill}[6]{%
+\noindent
+\begin{tikzpicture}[baseline=(b.base)]
+\node[fill=black,minimum width=15mm,minimum height=15mm,text=white,inner sep=0,rounded corners=1pt] (b) {};
+\node[text=white,font=\sffamily\bfseries\tiny] at ([yshift=-2.3mm]b.north) {DRILL};
+\node[text=white,font=\sffamily\bfseries\fontsize{24}{24}\selectfont] at ([yshift=-1.5mm]b.center) {#1};
+\end{tikzpicture}\hspace{4mm}%
+\begin{minipage}[b]{0.86\textwidth}
+{\fontsize{20}{22}\selectfont\bfseries #2}\\[1pt]
+{\itshape #3}\\[1pt]
+{\small\textbf{Needs:} #4\quad \textbf{Skills:} #5\quad \textbf{Gate:} #6}
+\end{minipage}\par\vspace{2pt}
+\noindent\rule{\textwidth}{0.8pt}\par\vspace{3pt}}
+
+\newtcolorbox{why}{enhanced,colback=white,colframe=black,boxrule=0.5pt,arc=2mm,
+  colbacktitle=black!12,coltitle=black,fonttitle=\small\bfseries,title=Why this matters,
+  left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,before skip=2pt,after skip=4pt}
+\newtcolorbox{sidebox}[1]{enhanced,colback=white,colframe=black,boxrule=0.5pt,arc=2mm,
+  colbacktitle=black!12,coltitle=black,fonttitle=\small\bfseries,title=#1,
+  left=2mm,right=2mm,top=1mm,bottom=1mm,fontupper=\small,equal height group=bottom\thepage}
+\newtcolorbox{greybox}{enhanced,colback=black!6,colframe=black!6,arc=2mm,left=2mm,right=2mm,top=1mm,bottom=1mm,fontupper=\small}
+
+% ---------- 5 minutes
+\newcommand{\tm}[1]{\fbox{\scriptsize\bfseries\strut #1}}
+\newenvironment{fivemin}{\sect{The 5 minutes}\small\renewcommand{\arraystretch}{1.25}\tabularx{\textwidth}{@{}p{17mm}X@{}}}{\endtabularx}
+
+% ---------- ladder
+\newcommand{\cb}{\framebox(7,7){}}
+\newenvironment{ladder}{\begin{tcolorbox}[enhanced,colback=white,colframe=black,boxrule=0.8pt,arc=2mm,
+  colbacktitle=black!12,coltitle=black,fonttitle=\small\bfseries,
+  title={Level ladder --- stay on a level for days or weeks; tick it when you play it clean 3 times in a row},
+  left=0mm,right=0mm,top=0.5mm,bottom=0.5mm,before skip=4pt,after skip=4pt]\small
+  \renewcommand{\arraystretch}{1.12}\begin{tabular}{@{\hspace{1mm}}c@{\hspace{1.5mm}}l@{\hspace{1.5mm}}p{0.745\linewidth} r@{\hspace{2mm}}p{13mm}@{}}}
+  {\end{tabular}\end{tcolorbox}}
+\newcommand{\lv}[3]{\cb & \textbf{#1} & #2 & \footnotesize #3 & \rule[-1pt]{13mm}{0.4pt}\\}
+
+\newcommand{\bottom}[2]{\par\vspace{2pt}\noindent
+\begin{tcbraster}[raster columns=2,raster equal height,raster column skip=3mm,
+  enhanced,colback=white,colframe=black,boxrule=0.5pt,arc=2mm,colbacktitle=black!12,coltitle=black,
+  fonttitle=\small\bfseries,left=2mm,right=2mm,top=1mm,bottom=1mm,fontupper=\small]
+\begin{tcolorbox}[title=Make it harder]#1\end{tcolorbox}
+\begin{tcolorbox}[title=In the recording]#2\end{tcolorbox}
+\end{tcbraster}}
+
+\newcommand{\blank}[1][25mm]{\rule[-1pt]{#1}{0.4pt}}
+
+% ---------- rhythm grid
+\newcommand{\hit}{\tikz[baseline=-0.6ex]\fill (0,0) circle (2.1pt);}
+\newcommand{\hold}{\tikz[baseline=-0.6ex]\draw[line width=0.9pt] (-1.8mm,0) -- (1.8mm,0);}
+\newcommand{\no}{\tikz[baseline=-0.6ex]\fill[black!50] (0,0) circle (0.8pt);}
+
+\newcommand{\score}[2][\textwidth]{\par\noindent\includegraphics[width=#1]{ly/#2.cropped.pdf}\par}
+\newcommand{\kb}[1]{\input{kbd/#1.tex}}
+
+\newcommand{\chunk}[5]{%
+\noindent
+\begin{tikzpicture}[baseline=(b.base)]
+\node[fill=black,minimum width=17mm,minimum height=15mm,text=white,inner sep=0,rounded corners=1pt] (b) {};
+\node[text=white,font=\sffamily\bfseries\tiny] at ([yshift=-2.3mm]b.north) {BARS};
+\node[text=white,font=\sffamily\bfseries\fontsize{17}{17}\selectfont] at ([yshift=-1.5mm]b.center) {#1};
+\end{tikzpicture}\hspace{4mm}%
+\begin{minipage}[b]{0.84\textwidth}
+{\fontsize{19}{21}\selectfont\bfseries #2}\\[1pt]
+{\itshape #3}\\[1pt]
+{\small\textbf{Needs:} #4\quad \textbf{Gate:} #5}
+\end{minipage}\par\vspace{2pt}
+\noindent\rule{\textwidth}{0.8pt}\par\vspace{3pt}}
+
+\newtcolorbox{barbox}{enhanced,colback=white,colframe=black,boxrule=0.5pt,arc=2mm,
+  colbacktitle=black!12,coltitle=black,fonttitle=\small\bfseries,title=Bar by bar (score open beside you),
+  left=2mm,right=2mm,top=1mm,bottom=1mm,before skip=2pt,after skip=4pt,fontupper=\small}
+
+\newcommand{\bb}[2]{\textbf{#1}\quad #2\par\vspace{1.5pt}}
+\newcommand{\T}{\textbf{T}}\newcommand{\Lx}{\textbf{L}}\newcommand{\Hx}{\textbf{H}}
+
+\newenvironment{sessions}{\sect{Sessions (5 minutes each, in order; repeat one until it's clean)}\small\renewcommand{\arraystretch}{1.25}\tabularx{\textwidth}{@{}p{8mm}X@{}}}{\endtabularx}
+\newcommand{\ses}[2]{\fbox{\scriptsize\bfseries #1} & #2\\}
+
+\newcommand{\bottomc}[2]{\par\vspace{2pt}\noindent
+\begin{tcbraster}[raster columns=2,raster equal height,raster column skip=3mm,
+  enhanced,colback=white,colframe=black,boxrule=0.5pt,arc=2mm,colbacktitle=black!12,coltitle=black,
+  fonttitle=\small\bfseries,left=2mm,right=2mm,top=1mm,bottom=1mm,fontupper=\small]
+\begin{tcolorbox}[title=Pencil on your score]#1\end{tcolorbox}
+\begin{tcolorbox}[title=If it falls apart]#2\end{tcolorbox}
+\end{tcbraster}}
+
+\begin{document}
+
+%===================================================== COVER
+{\fontsize{24}{26}\selectfont\bfseries The Loneliest Girl: Easy Version, Bar by Bar}\par\vspace{2pt}
+{\large A practice plan that works directly on your score (arr.\ Calary, bars 1--22)}\par
+\vspace{2pt}\noindent\rule{\textwidth}{0.8pt}\par\vspace{2pt}
+
+\begin{minipage}[t]{0.485\textwidth}
+\sect{How this works}
+The practice material is your score. Each page takes four bars, prints the left hand exactly as written with chord names and meet letters, says what the right hand does in each bar, and gives you a sequence of 5-minute sessions that walk those bars from hands separately to hands together at tempo.
+
+If something here doesn't match your score, your score wins. Correct this page in pencil.
+
+\sect{Order: the order of the piece}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}l l l@{}}
+1. & Bars 1--4 & intro\\
+2. & Bars 5--8 & verse, first half\\
+3. & Bars 9--12 & verse, second half\\
+4. & Bars 13--16 & chorus, first half\\
+5. & Bars 17--20 & chorus, second half\\
+6. & Bars 20--22 & ending, then the whole piece\\
+\end{tabular}\par
+You learn it from the top, so every new page joins onto what you can already play. The intro is the trickiest two bars in the easy version (ties and two-note chords), so its gate is 44, not 56. Bring it up to speed as review while you learn the verse.
+
+\sect{The one thing that makes this piece hard}
+The hands almost never strike together. In bars 5--12 the left hand plays 16 chords, and the right hand starts a note at the same moment only 5 times. The rest of the time the right hand is either resting when the chord sounds or holding a tied note through it. Every page shows the left hand exactly as in your score, with a \textbf{meet letter} above each chord:\par\vspace{2pt}
+\begin{tabular}{@{}c l@{}}
+\T & both hands strike together\\
+\Lx & left hand strikes alone; right hand rests\\
+\Hx & left hand strikes; right hand \emph{holds} a tied note\\
+\end{tabular}\par
+Copy the letters into your score above the left-hand chords. They're the whole difficulty of hands together.
+
+\sect{Tempo}
+The mark is 56 quarter notes per minute, written in 16ths: count ``\textbf{1 e \& a 2 e \& a}\dots''. Work at \textbf{40}, then \textbf{48}, then \textbf{56}. The recording's 112 is the same speed.
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}
+\sect{The seven moves}
+Every session is built from these. Each works on the bars named in the session.\par\vspace{3pt}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}l X@{}}
+\toprule
+LH & Left hand alone, with pedal, counting out loud.\\
+TAP & Tap the right hand's \emph{rhythm} on one key, counting every 16th. No pitches.\\
+NAME & Say the right hand's note names out loud, in rhythm. No playing.\\
+RH & Right hand alone.\\
+MEET & Left hand as written, right hand plays \emph{only} the notes marked \T\ (and holds the \Hx\ notes). Everything else is silence. This is the skeleton of hands together.\\
+HT & Hands together.\\
+SEAM & The last beat of one bar plus the first beat of the next, 5 times in a row. Bar lines are where you'll stop; SEAM removes the stop.\\
+\bottomrule
+\end{tabularx}\normalsize
+
+\sect{Daily routine}
+\begin{enumerate}
+\item \textbf{One session} from your current page (5 minutes). Stay on it until it's clean 3 times in a row, then move to the next session.
+\item \textbf{With 10 minutes:} add one minute of HT on the previous page's bars, then join them to the current bars.
+\end{enumerate}
+
+\sect{Left-hand chords in the whole easy version}
+\small\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{@{}l l >{\raggedright\arraybackslash}X@{}}
+\toprule
+Chord & Notes (bottom up) & Where\\\midrule
+Em & E-G-B & bars 1--12 beat 1 of odd bars; chorus\\
+C & C-E-G & verse and intro, beat 3 of odd bars\\
+G & G-B-D (below the staff) & verse and intro, beat 1 of even bars\\
+Bm & B-D-F\sh & verse and intro, beat 3 of even bars\\
+C & E-G-C & chorus\\
+G & D-G-B & chorus\\
+D & D-F\sh-A & chorus\\
+Cmaj7 & C-E-G-B & bars 17 and 20--21\\
+\bottomrule
+\end{tabularx}\normalsize\par
+Both staves are in treble clef. The bottom staff is the left hand, around middle C.
+\end{minipage}
+
+\newpage
+%===================================================== 1-4
+\chunk{1--4}{Intro}{Where the piece starts. Two notes at once, an octave higher than written, ties everywhere, but only two bars to learn.}{nothing}{bars 1--4 HT at 44}
+
+\begin{barbox}
+\bb{8va}{The dashed ``8'' line over bars 1--4 means: play everything under it \textbf{one octave higher} than written. It ends at bar 4. From bar 5 you play where it's written.}
+\bb{Bar 1}{RH: \textbf{two-note chords}, mostly sixths. Starts together with the Em chord: 16th then dotted 8th (short-long). Beat 2 ends with a note \textbf{tied into beat 3}, so the RH holds while the C chord sounds. The last 16th is \textbf{tied into bar 2}. LH: Em, C (same as the verse).}
+\bb{Bar 2}{Beat 1: holding the tie while the G chord sounds. Then a 16th rest and a figure where each pair of notes arrives just before the beat and is tied across it. The RH never strikes on beat 1 or 3 in this bar. LH: G, Bm.}
+\bb{Bars 3--4}{Identical to bars 1--2. Check this, then learn only two bars.}
+\end{barbox}
+
+\sect{Left hand as in your score, with meet letters}
+\score{lh_1_4}
+{\footnotesize Letters above each chord: \textbf{T} right hand strikes with it, \textbf{L} right hand rests, \textbf{H} right hand holds a tied note. Brackets under the staff: pedal.}\par\vspace{3pt}
+{\small \sect{Why it's harder than it looks}
+Six of the eight chord beats have the RH \emph{holding} a tied note. The RH plays just before the beat and lets the left hand land on it. Counting every 16th out loud is the only way to place those early notes.\par\vspace{2pt}
+\textbf{Sixths:} keep fingers 1 and 4 (or 1 and 5) in a fixed shape and move the whole hand.}
+
+
+\begin{sessions}
+\ses{S1}{\textbf{LH} bars 1--4 with pedal at 40. It's the same left hand as the whole verse, so this pays off twice.}
+\ses{S2}{\textbf{TAP} bar 1, then bar 2. Every tie: say the count, don't tap. This is the key session; repeat it for several days.}
+\ses{S3}{\textbf{RH} bar 1, top notes only, in the right octave, at 40. Then both notes of each pair.}
+\ses{S4}{\textbf{RH} bar 2 the same way: top notes, then pairs. Then \textbf{SEAM} 1$\rightarrow$2 (the tie across the bar line).}
+\ses{S5}{\textbf{MEET} bars 1--2: LH chords, RH only its first note (T) and the held notes (H). Feel the LH land under held notes.}
+\ses{S6}{\textbf{HT} bars 1--2 at 40. Then 1--4.}
+\ses{S7}{\textbf{HT} bars 1--4, three clean runs at 40, then 44. Move on to bars 5--8; bring the intro up to 56 as review while you learn the verse.}
+\end{sessions}
+
+\bottomc{``8va UP'' in big letters at bar 1 and ``normal'' at bar 5. ``hold'' over every tied note that crosses beat 1 or 3.}
+{Replaying tied notes: S1 again. Wrong octave: pencil the reminder. Pairs feel clumsy: top notes only for a week while the LH and rhythm settle.}
+
+\newpage
+%===================================================== 5-8
+\chunk{5--8}{Verse, first half}{Two chords per bar, a right hand that enters after the chord, and the first grace notes.}{bars 1--4 HT at 44}{bars 1--8 HT at 48}
+
+\begin{barbox}
+\bb{Bar 5}{RH starts with an 8th rest, so the Em chord sounds alone. Busy 16ths. Beat 3 starts with a 16th rest after the C chord. The bar ends with a single 16th on ``4 a'' that leads into bar 6. LH: Em, C.}
+\bb{Bar 6}{The easy bar: RH starts \emph{with} the G chord on beat 1, rests on beat 2 (quarter rest), and starts again with the Bm chord on beat 3 (dotted 8th + 16th). LH: G, Bm.}
+\bb{Bar 7}{Like bar 5: an 8th rest at the start of the bar and another at beat 3. Look for the small slashed note: a \textbf{grace note}, played as fast as possible just before the main note. LH: Em, C.}
+\bb{Bar 8}{RH is silent for almost two beats (quarter rest, 8th rest, 16th rest), then a grace note and a 16th on ``2 a'' lead into a note \emph{with} the Bm chord on beat 3. LH: G, Bm.}
+\end{barbox}
+
+\sect{Left hand as in your score, with meet letters}
+\score{lh_5_8}
+{\footnotesize Letters above each chord: \textbf{T} right hand strikes with it, \textbf{L} right hand rests, \textbf{H} right hand holds a tied note. Brackets under the staff: pedal.}\par\vspace{3pt}
+{\small \sect{Hand position}
+The RH stays around the middle of the treble staff, from about the A in the second space to the F\sh\ on the top line. Put finger 2 or 3 on the first note of bar 5 and see whether bars 5--8 fit without jumping. Pencil in whichever finger works.}
+
+
+\begin{sessions}
+\ses{S1}{\textbf{LH} bars 5--8 at 40 with pedal, counting out loud. \textbf{TAP} bar 5 until it's steady, then bar 6.}
+\ses{S2}{\textbf{NAME} bars 5--6. \textbf{RH} bars 5--6 at 40. Repeat bar 5 on its own until the 16ths are even.}
+\ses{S3}{\textbf{MEET} bars 5--6: in bar 5 your RH plays nothing when the chords sound; in bar 6 both strike together on beats 1 and 3. Then \textbf{HT} bars 5--6 at 40.}
+\ses{S4}{\textbf{TAP} bars 7--8, including the grace notes as a quick flick. \textbf{NAME} bars 7--8. \textbf{RH} bars 7--8 at 40.}
+\ses{S5}{\textbf{MEET} bars 7--8 (bar 8's long silence is part of the rhythm: count through it). \textbf{HT} bars 7--8 at 40.}
+\ses{S6}{\textbf{SEAM} 4$\rightarrow$5 (the hand drops an octave and goes from pairs to single notes), 5$\rightarrow$6, 6$\rightarrow$7, 7$\rightarrow$8. Then \textbf{HT} bars 5--8 at 40.}
+\ses{S7}{\textbf{HT} bars 5--8 at 40, then 48. Then \textbf{HT} bars 1--8: intro into verse.}
+\end{sessions}
+
+\bottomc{The meet letters above the LH chords. ``1 e \& a'' over any beat you misplace. Finger numbers on the first note of each bar. Circle the grace notes in 7 and 8.}
+{Rhythm wrong: back to TAP on that bar only. Hands collide: MEET at 40. Stopping at a bar line: SEAM on that bar line.}
+
+\newpage
+%===================================================== 9-12
+\chunk{9--12}{Verse, second half}{Same chords, plus ties across the bar line and the first notes on ledger lines above the staff.}{bars 1--8 HT at 48}{bars 1--12 HT at 52}
+
+\begin{barbox}
+\bb{Bar 9}{Starts like bar 7: 8th rest, then 16ths. After beat 3 (8th rest) there's a grace note, and the last note is \textbf{tied into bar 10}. LH: Em, C.}
+\bb{Bar 10}{Beat 1 is the tied note from bar 9: \emph{hold} it, don't replay it, while the G chord sounds. Quarter rest, then dotted 8th + 16th pairs on beats 3 and 4, the first one together with Bm. LH: G, Bm.}
+\bb{Bar 11}{Starts with a 16th rest: RH comes in on ``1 e''. The melody jumps up to the first \textbf{ledger line above the staff} (A). Grace note after beat 3, and the bar ends with four rising 16ths \textbf{tied into bar 12}. LH: Em, C.}
+\bb{Bar 12}{Beat 1 is tied: hold through the G chord. Then 8th rest and 16th rest, up to the B above the ledger line, then dotted rhythms, together with Bm on beat 3. LH: G, Bm.}
+\end{barbox}
+
+\sect{Left hand as in your score, with meet letters}
+\score{lh_9_12}
+{\footnotesize Letters above each chord: \textbf{T} right hand strikes with it, \textbf{L} right hand rests, \textbf{H} right hand holds a tied note. Brackets under the staff: pedal.}\par\vspace{3pt}
+{\small \sect{Compare first}
+Put bars 7 and 9 side by side: the first half of each bar is the same. Bars 11--12 are the verse's climax, going higher. Learn 9--10 as ``7 with a tie''.}
+
+
+\begin{sessions}
+\ses{S1}{\textbf{TAP} bars 9--10. At the tie, say the count but don't tap: ``\dots a (hold) e \& a''. \textbf{RH} bars 9--10 at 40.}
+\ses{S2}{\textbf{MEET} bars 9--10: in bar 10 your RH finger is already down when the G chord sounds. Feel the chord arrive under a held note. \textbf{HT} 9--10 at 40.}
+\ses{S3}{Ledger lines: \textbf{NAME} every note in bars 11--12 above the top line: A (first ledger line), B (above it). \textbf{TAP} 11--12.}
+\ses{S4}{\textbf{RH} bars 11--12 at 40. Plan the shift: the hand has to reach up in bar 11; pencil the finger that takes the high A.}
+\ses{S5}{\textbf{MEET} bars 11--12, then \textbf{HT} 11--12 at 40.}
+\ses{S6}{\textbf{SEAM} 8$\rightarrow$9, 9$\rightarrow$10 (the tie), 10$\rightarrow$11, 11$\rightarrow$12 (the tie). Then \textbf{HT} 9--12 at 40.}
+\ses{S7}{\textbf{HT} the whole verse, bars 5--12, at 40, then 48. Then \textbf{HT} bars 1--12 from the top.}
+\end{sessions}
+
+\bottomc{Draw the ties darker, or write ``hold'' over the tied note at the start of bars 10 and 12. Note names over the ledger-line notes until you stop needing them.}
+{Replaying tied notes: TAP with ``hold'' spoken aloud. Lost on high notes: NAME for a few days. The verse falls apart at bar 9: SEAM 8$\rightarrow$9 is usually the fix.}
+
+\newpage
+%===================================================== 13-16
+\chunk{13--16}{Chorus, first half}{New left-hand shapes, left-hand quarter notes, and a triplet.}{bars 1--12 HT at 48}{bars 13--16 HT at 56}
+
+\begin{barbox}
+\bb{Bar 13}{RH: one pattern twice (8th rest, two 16ths, two 8ths), sitting high around G and the ledger-line A; the second time it ends with a 16th pair. Both halves start after the chord. LH: C as \textbf{E-G-C}, G as \textbf{D-G-B}, half notes.}
+\bb{Bar 14}{RH starts \emph{with} the Em chord (two 16ths), rests, then rising 16ths and a note \textbf{tied across beat 3}. LH: Em (E-G-B) half note, then D (D-F\sh-A) as \textbf{two quarter notes} on beats 3 and 4.}
+\bb{Bar 15}{RH: the bar 13 pattern in the first half; second half starts with a 16th rest and climbs to the B above the ledger line, dotted rhythm at the end. LH: \textbf{four quarter notes}: C, C, G, G.}
+\bb{Bar 16}{RH starts with the chord (three 16ths), then rests, then a tied 16th into a \textbf{triplet} on beat 3 (the ``3'' bracket: three even 8ths in one beat). LH: four quarters: Em, Em, D, D.}
+\end{barbox}
+
+\sect{Left hand as in your score, with meet letters}
+\score{lh_13_16}
+{\footnotesize Letters above each chord: \textbf{T} right hand strikes with it, \textbf{L} right hand rests, \textbf{H} right hand holds a tied note. Brackets under the staff: pedal.}\par\vspace{3pt}
+{\small \sect{Left-hand shapes}
+The chorus chords are voiced so the hand hardly moves. C (E-G-C) to G (D-G-B): E and C each step down, G stays. Em (E-G-B) to D (D-F\sh-A): all three step down. Fingers: 5-3-1 or 5-2-1, whichever reaches.\par\vspace{3pt}
+\textbf{Triplet:} say ``tri-po-let'' in the time of one beat. The first note is tied, so you only play ``po'' and ``let''.}
+
+
+\begin{sessions}
+\ses{S1}{\textbf{LH} bars 13--16 at 40 with pedal (change on every chord, quarters included). This is new: give it a full session.}
+\ses{S2}{\textbf{NAME} bars 13--14 (ledger A!). \textbf{TAP} 13--14. \textbf{RH} 13--14 at 40.}
+\ses{S3}{\textbf{MEET} 13--14 (beat 3 of 14 is a held note over the D chord). \textbf{HT} 13--14 at 40.}
+\ses{S4}{\textbf{TAP} bar 16's triplet alone, then bars 15--16. \textbf{RH} 15--16 at 40.}
+\ses{S5}{\textbf{MEET} 15--16: the LH quarters give you four meeting points per bar now. \textbf{HT} 15--16 at 40.}
+\ses{S6}{\textbf{SEAM} 12$\rightarrow$13 (verse into chorus: LH shape changes!), 13$\rightarrow$14, 14$\rightarrow$15, 15$\rightarrow$16. Then \textbf{HT} 13--16 at 40.}
+\ses{S7}{\textbf{HT} 13--16 at 48, then 56. Then \textbf{HT} 9--16 across the join.}
+\end{sessions}
+
+\bottomc{Chord names above the LH chords (the shapes are new). The meet letters on all four beats. A bracket over the triplet with ``tri-po-let''.}
+{LH quarters collide with RH 16ths: MEET at 40 until boring. Triplet uneven: TAP it alone against the metronome. Wrong LH shape: LH alone, eyes on the staff.}
+
+\newpage
+%===================================================== 17-20
+\chunk{17--20}{Chorus, second half}{Mostly repeats of 13--15, a Cmaj7, and a fast descending run into the ending.}{bars 13--16 HT at 48}{bars 13--20 HT at 56}
+
+\begin{barbox}
+\bb{Bar 17}{RH: the bar 13 pattern twice (8th rest, two 16ths, two 8ths), identical halves. LH: \textbf{Cmaj7 (C-E-G-B)} half note, then G (D-G-B) half note.}
+\bb{Bar 18}{RH: the pattern once, then dotted 8th + 16th and 16th--8th--16th on beats 3 and 4, together with the D chords. LH: Em half note, D, D quarters.}
+\bb{Bar 19}{RH: identical to bar 17. LH: four quarters: C, C, G, G (as in bar 15).}
+\bb{Bar 20}{RH starts \emph{with} the chord on the B above the ledger line and walks down in 8ths, then 16ths, ending with a very quick three-note turn and an 8th rest. LH: Em, D as quarters, then \textbf{Cmaj7 held} (tied into bar 21, see the ending page).}
+\end{barbox}
+
+\sect{Left hand as in your score, with meet letters}
+\score{lh_17_20}
+{\footnotesize Letters above each chord: \textbf{T} right hand strikes with it, \textbf{L} right hand rests, \textbf{H} right hand holds a tied note. Brackets under the staff: pedal.}\par\vspace{3pt}
+{\small \sect{Compare first}
+Bars 17 and 19 have the same right hand: bar 13's pattern, played twice without the change at the end. Bar 18 starts the same way. So the only really new bar here is 20. Check each claim against your score before you rely on it.\par\vspace{3pt}
+\textbf{Cmaj7:} root-position C with B on top. Fingers 5-3-2-1.}
+
+
+\begin{sessions}
+\ses{S1}{\textbf{LH} bars 17--20 at 40 with pedal. The Cmaj7 in bar 17 is the new shape.}
+\ses{S2}{\textbf{RH} bars 17--19 at 40 (you know the pattern from 13). \textbf{MEET} 17--19, then \textbf{HT} 17--19.}
+\ses{S3}{Bar 20 alone: \textbf{NAME}, then \textbf{TAP}, then \textbf{RH} at 40. Play the three-note turn slowly as three even 16ths first, then squeeze it.}
+\ses{S4}{\textbf{MEET} bar 20 (together on beats 1, 2 and 3). \textbf{HT} bar 20, then \textbf{SEAM} 19$\rightarrow$20.}
+\ses{S5}{\textbf{HT} bars 17--20 at 40. \textbf{SEAM} 16$\rightarrow$17.}
+\ses{S6}{\textbf{HT} the whole chorus, bars 13--20, at 40, then 48, then 56.}
+\ses{S7}{\textbf{HT} verse and chorus, bars 5--20, without stopping.}
+\end{sessions}
+
+\bottomc{``= 13'' over bars 17 and 19 (or whatever your comparison shows). ``Cmaj7'' over the four-note chord. Note names for bar 20's first beat.}
+{Bar 20 rushed: S3 again, slower. Losing your place in the repeats: count bars out loud, ``seventeen, eighteen\dots''.}
+
+\newpage
+%===================================================== 20-22 + whole
+\chunk{20--22}{Ending, then the whole piece}{A held chord, a two-beat bar, a final chord. Then bars 1--22.}{bars 13--20 HT at 48}{bars 1--22 HT at 56}
+
+\begin{barbox}
+\bb{Bar 20}{(From the chorus page.) The LH's last chord is \textbf{Cmaj7}, a half note on beat 3, \textbf{tied into bar 21}. Don't replay it.}
+\bb{Bar 21}{\textbf{2/4}: only two beats. LH holds the tied Cmaj7. RH: 8th rest, 16th rest, then a grace note and a few quick notes that lead into the last bar. Count ``1 e \& a 2 e \& a'' and move on.}
+\bb{Bar 22}{\textbf{4/4} again. Both hands play a held chord on beat 1, whole notes: RH two notes, LH two low notes below the staff. Let it ring with the pedal. The \textbf{double bar} ends the easy version (the normal version starts at bar 23).}
+\end{barbox}
+
+\sect{Left hand as in your score, with meet letters}
+\score[0.78\textwidth]{lh_20_22}
+{\footnotesize Letters above each chord: \textbf{T} right hand strikes with it, \textbf{L} right hand rests, \textbf{H} right hand holds a tied note. Brackets under the staff: pedal.}\par\vspace{3pt}
+{\small \sect{The 2/4 bar}
+Bars with a changed time signature are short on purpose: the music breathes, then lands. The common mistake is to wait two extra beats in bar 21. Count it as half a bar.}
+
+
+\begin{sessions}
+\ses{S1}{\textbf{LH} bars 20--22 at 40: Em, D, Cmaj7 held through bar 21, final chord. Count ``1 2 3 4 | 1 2 | 1 2 3 4''.}
+\ses{S2}{\textbf{RH} bars 21--22 at 40. \textbf{SEAM} 20$\rightarrow$21 and 21$\rightarrow$22.}
+\ses{S3}{\textbf{HT} bars 19--22 at 40, then 48.}
+\ses{S4}{\textbf{Whole piece}, bars 1--22, at 40. Stop wherever you stop, mark that bar line, and SEAM it next session.}
+\ses{S5}{\textbf{Whole piece} at 48, three clean runs.}
+\ses{S6}{\textbf{Whole piece} at 56.}
+\ses{S7}{\textbf{With the recording}: its 112 is your 56. Start with the verse and chorus, then all of it.}
+\end{sessions}
+
+\bottomc{``2 beats!'' over bar 21. Bar lines where you stopped during S4, circled: those are your SEAM list.}
+{The whole piece falls apart at one spot: go back to that page's MEET session for those two bars. It's nearly always a seam or a held note.}
+
+\newpage
+%===================================================== TRACKER
+{\fontsize{22}{24}\selectfont\bfseries Tracker}\par
+{\itshape Tick a box when those bars are clean 3 times in a row.}\par
+\vspace{2pt}\noindent\rule{\textwidth}{0.8pt}
+
+\sect{Bar groups}
+\small
+\renewcommand{\arraystretch}{1.6}
+\newcommand{\bx}{\framebox(9,9){}}
+\begin{tabularx}{\textwidth}{|l|l|c|c|c|c|c|c|X|}
+\hline
+\textbf{Bars} & \textbf{Section} & \textbf{LH} & \textbf{RH} & \textbf{MEET} & \textbf{HT 40} & \textbf{HT 48} & \textbf{HT 56} & \textbf{Notes / date}\\\hline
+5--6 & Verse & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+7--8 & Verse & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+9--10 & Verse & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+11--12 & Verse & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+13--14 & Chorus & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+15--16 & Chorus & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+17--19 & Chorus & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+20 & Chorus end & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+1--2 & Intro & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+21--22 & Ending & \bx & \bx & \bx & \bx & \bx & \bx & \\\hline
+\end{tabularx}\normalsize
+
+\sect{Joins}
+\small
+\renewcommand{\arraystretch}{1.6}
+\begin{tabularx}{\textwidth}{|l|c|c|c|X|}
+\hline
+\textbf{Run} & \textbf{40} & \textbf{48} & \textbf{56} & \textbf{Where it broke}\\\hline
+Verse, 5--12 & \bx & \bx & \bx & \\\hline
+Chorus, 13--20 & \bx & \bx & \bx & \\\hline
+Verse into chorus, 5--20 & \bx & \bx & \bx & \\\hline
+Intro into verse, 1--12 & \bx & \bx & \bx & \\\hline
+Whole easy version, 1--22 & \bx & \bx & \bx & \\\hline
+With the recording & \multicolumn{3}{c|}{\bx} & \\\hline
+\end{tabularx}\normalsize
+
+\sect{Seam list}
+Bar lines where you keep stopping. SEAM each one at the start of your next session.\par\vspace{4pt}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|}
+\hline
+&&&&&\\\hline
+&&&&&\\\hline
+\end{tabularx}
+
+\end{document}
