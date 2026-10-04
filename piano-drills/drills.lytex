@@ -1,0 +1,1257 @@
+\input{preamble.tex}
+\begin{document}
+
+%======================================================================
+% INTRO
+%======================================================================
+\noindent{\fontsize{26}{30}\selectfont\bfseries Five-Minute Piano Drills}\\[1mm]
+{\large Twelve drills to repeat every day, from counting beats to writing your own melodies}\par
+\vspace{1mm}\hrule height 1.2pt\vspace{2mm}
+
+\begin{multicols}{2}\raggedcolumns
+\sect{What this set is for}
+Three targets:
+\begin{itemize}[leftmargin=4mm,itemsep=0pt,topsep=1pt]
+  \item Play \textbf{The Scientist} (Coldplay, F major, slow) and \textbf{The Loneliest Girl} (Carole \& Tuesday, G major, 112 BPM) with confidence.
+  \item Understand scales, chords, bass and melody well enough to \textbf{write your own} lo-fi piano loop or a simple synth melody.
+  \item Build the hand skills underneath: steady rhythm, both hands at once, moving between chords without looking.
+\end{itemize}
+Drum programming is left out. Everything here happens at the keyboard.
+
+\sect{These are drills, not lessons}
+You don't finish a drill. You repeat it for weeks and it gets easier and faster, the same way a gym routine does. Every drill has a \textbf{level ladder}. Climb it slowly.
+
+\sect{The daily routine}
+\begin{enumerate}[leftmargin=5mm,itemsep=1pt,topsep=1pt]
+  \item \textbf{Set a 5-minute timer.} Stop when it rings, even if it's going well. Tomorrow you'll want more.
+  \item \textbf{One front drill} (the lowest drill you haven't mastered). If you have 10 minutes, add \textbf{one review drill} from earlier.
+  \item Follow the \textbf{``The 5 minutes''} plan on the page. The last minute is always free playing. Don't skip it; it's the part that makes you come back.
+\end{enumerate}
+
+\sect{Three rules}
+\textbf{1. Count out loud.} ``One and two and\ldots'' Every time. It fixes more mistakes than anything else.\\[0.8mm]
+\textbf{2. Metronome ladder.} Start at a tempo where you make no mistakes. After 3 clean runs, add 5 BPM. Two stumbles in a row: drop 5 BPM.\\[0.8mm]
+\textbf{3. Slow and clean beats fast and messy.} Your hands learn whatever you repeat, including the mistakes.
+
+\sect{When to move on, when to go back}
+\textbf{Move on} when you tick the level the page marks as the gate (usually L3 or L4). You don't need the top levels before starting the next drill. Keep climbing them as review.\\[0.8mm]
+\textbf{Go back} when a later drill falls apart. It is nearly always a gap in an earlier one: shaky chords (3--4), weak left hand (5) or lost count (1). Spend a few days there. That's normal.
+
+\sect{Kit}
+Metronome app. Phone voice recorder, or a DAW with MIDI recording. Hearing yourself back, or seeing your notes in a piano roll, is the fastest feedback you can get. Sustain pedal if you have one.
+
+\sect{Reference sheets}
+Sheets \textbf{2+} and \textbf{3+} come straight after Drills 2 and 3. They aren't drills: they list the exact notes of every key and every chord. Keep them on the music stand.
+
+\columnbreak
+
+\sect{How to read the pages}
+\begin{tipbox}
+\small
+\kbd[0.26]{1}{0/1,4/3,7/5}{0}\hfill
+\begin{minipage}[b]{0.5\linewidth}
+\dotk\ black dot = press this key. The number is a \textbf{finger} or a \textbf{scale step}; the page tells you which.\\
+\tri\ triangle = the \textbf{root} or home note.
+\end{minipage}\par\vspace{1mm}
+\textbf{Fingers:} 1 = thumb, 2 = index, 3 = middle, 4 = ring, 5 = pinky. Same on both hands.\\[0.6mm]
+\textbf{Chord symbols:} C = C major, Am = A minor, Dm7 = D minor seventh, Fsus2 = F with G instead of A, B\fl\dimc\ = diminished.\\[0.6mm]
+\textbf{Roman numerals} number the chords of a key: I = the chord on step 1, vi = the chord on step 6. Capitals are major, small letters are minor. Drill 3 explains it.\\[0.6mm]
+\textbf{Rhythm grids} split a 4/4 bar into 8 slots (every drill here is in 4/4):\par
+\begin{center}\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}l*{8}{G}@{}}
+  & \bfseries1 & \bfseries\& & \bfseries2 & \bfseries\& & \bfseries3 & \bfseries\& & \bfseries4 & \bfseries\& \\
+\grow{}x-.x-.x-
+\end{tabular}\end{center}
+\hit\ = play, \hold\ = keep holding, \textcolor{black!40}{·} = nothing new. This one is the 3-3-2 rhythm of Drill 1.
+\end{tipbox}
+
+\sect{The map}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\linewidth}{@{}c>{\raggedright\arraybackslash}p{27mm}X@{}}
+\toprule
+\# & Drill & What it gives you \\
+\midrule
+1 & Count the Groove & steady time, syncopation, the pop ``push'' \\
+2 & The Major Scale & keys of G and F, fingering, steps and thirds \\
+3 & Chord Staircase & every chord in a key, the number system \\
+4 & Lazy Hands & inversions; both songs' chord loops \\
+5 & The Bass Engine & left-hand bass patterns, 8th-note drive \\
+6 & Broken Chords & arpeggios, lo-fi texture \\
+7 & Split the Beat & hands together, the pop groove \\
+8 & Lo-fi Colours & 7ths, sus2, add9 \\
+9 & No Wrong Notes & pentatonic improvising, target notes \\
+10 & Build a Tune & motif to 8-bar melody \\
+11 & Big Five Progressions & the loops under most songs \\
+12 & Chord Vocabulary & the song chords, nine chord types \\
+\bottomrule
+\end{tabularx}
+\normalsize
+
+\sect{Typical path}
+Weeks 1--3: Drills 1 + 2. Weeks 3--6: 3 + 4, with the song chord loops appearing. Weeks 6--10: 5, 6, 7 (both hands, grooves). From there: 8, 9, 10 (colour and your own melodies), while the song roadmap on the last pages pulls it together. Slower is fine.\\[0.8mm]
+\textbf{Drills 11 and 12 run alongside.} Start 12 once Drill 3 passes its gate and 11 once Drill 4 does, and use them as your review drill on the days you have 10 minutes.
+
+\end{multicols}
+
+%======================================================================
+% DRILL 1
+%======================================================================
+\drillhead{1}{Count the Groove}{One chord, six rhythms. Rhythm first, because everything sits on it.}{\textbf{Needs:} nothing \quad\textbf{Skills:} pulse, 8th notes, syncopation, the ``push'' \quad\textbf{Gate to Drill 2+:} L3}
+
+\begin{why}
+Music runs on a grid. In 4/4 each bar has \textbf{4 beats}, and each beat splits in two: \textbf{1 \& 2 \& 3 \& 4 \&}. That makes 8 slots per bar, and every rhythm in pop, lo-fi and EDM is a choice of which slots to play.
+Notes on the numbers feel steady. Notes on the ``\&''s feel like they lean forward; that is \textbf{syncopation}. The 3-3-2 pattern (C below) sits under a huge amount of pop and electronic music. Pattern F plays the next chord half a beat early. That early chord is called a \textbf{push}, and pop piano like The Loneliest Girl is full of them.
+\end{why}
+
+\sect{The six patterns}
+\begin{minipage}[t]{0.52\linewidth}
+\vspace{0pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}l*{8}{G}@{}}
+  & \bfseries1 & \bfseries\& & \bfseries2 & \bfseries\& & \bfseries3 & \bfseries\& & \bfseries4 & \bfseries\& \\ \midrule
+\grow{\textbf{A} Quarters}x.x.x.x. \\
+\grow{\textbf{B} Eighths}xxxxxxxx \\
+\grow{\textbf{C} 3-3-2}x..x..x. \\
+\grow{\textbf{D} Charleston}x..x.... \\
+\grow{\textbf{E} Off-beats}.x.x.x.x \\
+\grow{\textbf{F} The push}x...x..x \\
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\linewidth}
+\vspace{0pt}\small
+\textbf{How to play a pattern:} right hand plays the chord on every \hit, left hand holds the root (bottom note) for the whole bar.\\[1mm]
+\textbf{E}: this is the house-piano off-beat stab. Say the numbers, play only on the ``\&''s.\\[1mm]
+\textbf{F}: the hit on 4\& is \emph{already the next bar's chord}. Hold it through the next beat 1 and don't replay it. From bar 2 on, beat 1 stays silent.
+\end{minipage}
+
+\sect{The four chords}
+{\small Right hand fingers 1-3-5, left hand plays the single low note. Here with pattern C (3-3-2); counts written under.}\par
+\begin{lilypond}[staffsize=20]
+\score {
+  <<
+    \new ChordNames \chordmode { c1 a:m f g }
+    \new PianoStaff <<
+      \new Staff {
+        \time 4/4
+        <c' e' g'>4. <c' e' g'>4. <c' e' g'>4 |
+        <a c' e'>4. <a c' e'>4. <a c' e'>4 |
+        <f a c'>4. <f a c'>4. <f a c'>4 |
+        <g b d'>4. <g b d'>4. <g b d'>4 \bar "|."
+      }
+      \addlyrics { "1" "2&" "4" "1" "2&" "4" "1" "2&" "4" "1" "2&" "4" }
+      \new Staff { \clef bass c1 a, f, g, }
+    >>
+  >>
+  \layout { indent = 0 \context { \Score \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16) } }
+}
+\end{lilypond}
+
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{Clap and count.} Metronome at 60--70. Clap pattern A, then B, then C, 2 bars each, counting out loud.
+\at{1:00--3:00}{Today's two patterns on C.} Pick two patterns from the grid. Play each for 4 bars on C major. Count out loud the whole time.
+\at{3:00--4:00}{Add the chord loop.} Same patterns over C -- Am -- F -- G, one chord per bar, round and round.
+\at{4:00--5:00}{Play.} Keep the loop going and switch patterns whenever you like. That is a pop song's backing.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{Patterns A, B, C on one chord, counting aloud, no stops}{60 BPM}
+\lv{2}{All six patterns on one chord}{70}
+\lv{3}{\textbf{Gate.} Any pattern over C--Am--F--G, 8 bars without a break}{70}
+\lv{4}{Switch pattern every 4 bars without stopping (A$\to$C$\to$E$\to$F\ldots)}{80}
+\lv{5}{Left hand plays the root on beats 1 and 3 while the right plays the pattern}{80}
+\lv{6}{Pattern C and F at The Loneliest Girl's tempo}{112}
+\lv{7}{Roll a die each bar (1--6 = A--F) and play what it says}{90+}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Close your eyes. Metronome clicks only on beats 2 and 4. Record into a DAW, open the piano roll and see how close to the grid you really were. Invent pattern G.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+\textbf{Loneliest Girl}: pushes (F) at 112 BPM. \textbf{The Scientist}: steady 8ths (B) in the left hand, slow. \textbf{EDM}: off-beats (E) and 3-3-2 (C) are the basic moves.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 2
+%======================================================================
+\drillhead{2}{The Major Scale}{Seven notes, one step pattern. Learn it once and it works in every key.}{\textbf{Needs:} nothing (pairs with Drill 1) \quad\textbf{Skills:} keys of G and F, fingering, scale steps, thirds \quad\textbf{Gate:} L4}
+
+\begin{why}
+A \textbf{key} is a set of 7 notes. A melody in G major takes almost all of its notes from the G major scale. Every major scale uses the same step pattern:
+\textbf{whole, whole, half, whole, whole, whole, half} (W-W-H-W-W-W-H). A half step is the next key, black or white. A whole step skips one.
+Start the pattern on C and you get only white keys. Start on G and you need F\sh\ to keep it right. Start on F and you need B\fl. That is why \textbf{G major has one sharp} (The Loneliest Girl) and \textbf{F major has one flat} (The Scientist).
+Number the notes \textbf{1 to 7}. Step 1 is ``home'', where a melody sounds finished. Chords, bass lines and melodies in the later drills are all described with these numbers. \textbf{The exact notes of each key are on Sheet 2+, the next page.}
+\end{why}
+
+\begin{center}
+\begin{minipage}[t]{0.48\linewidth}\centering
+\textbf{G major} (1 sharp: F\sh) \quad {\small numbers = scale steps}\\[1mm]
+\kbd[0.36]{2}{7/1,9/2,11/3,12/4,14/5,16/6,18/7,19/1}{7,19}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}\centering
+\textbf{F major} (1 flat: B\fl) \quad {\small numbers = scale steps}\\[1mm]
+\kbd[0.36]{2}{5/1,7/2,9/3,10/4,12/5,14/6,16/7,17/1}{5,17}
+\end{minipage}
+\end{center}
+
+\sect{Fingering (right hand; numbers above the notes)}
+\begin{lilypond}[staffsize=19]
+\score {
+  \new Staff {
+    \key g \major
+    g'8-1^\markup\bold "G major" a'-2 b'-3 c''-1 d''-2 e''-3 fis''-4 g''-5 |
+    fis''-4 e''-3 d''-2 c''-1 b'-3 a'-2 g'4-1 \bar "||" \break
+    \key f \major
+    f'8-1^\markup\bold "F major" g'-2 a'-3 bes'-4 c''-1 d''-2 e''-3 f''-4 |
+    e''-3 d''-2 c''-1 bes'-4 a'-3 g'-2 f'4-1 \bar "|."
+  }
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+{\small\textbf{Right hand:} G and C major: 1-2-3, thumb under, 1-2-3-4-5. F major is different: 1-2-3-4, thumb under \emph{after} B\fl, 1-2-3-4.
+\textbf{Left hand, going up} (C, G and F): 5-4-3-2-1, finger 3 crosses over, 3-2-1.}
+
+\sect{Walking in thirds (skip one note each time)}
+\begin{lilypond}[staffsize=19]
+\score {
+  \new Staff {
+    \key g \major
+    g'8 b' a' c'' b' d'' c'' e'' | d'' fis'' e'' g'' fis'' a'' g''4 \bar "|."
+  }
+  \addlyrics { "1" "3" "2" "4" "3" "5" "4" "6" "5" "7" "6" "8" "7" "9" "8" }
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{C major, right hand, up and down.} Say the step numbers out loud: ``1 2 3 4 5 6 7 1''.
+\at{1:00--2:30}{Key of the day.} G on odd days, F on even days. Right hand, then left hand, slowly and evenly.
+\at{2:30--4:00}{Thirds walk} in the key of the day (above). This is how chords are built in Drill 3.
+\at{4:00--5:00}{Play.} Left hand holds the note on step 1 down low. Right hand plays any notes from today's scale in any order. None of them will sound wrong, because they're all in the key. Finish on 1 and listen to it land.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{C, G and F, right hand, one octave, even quarter notes}{60}
+\lv{2}{Same with the left hand}{60}
+\lv{3}{Both hands as 8th notes}{60}
+\lv{4}{\textbf{Gate.} Hands together, one octave, G and F; thirds walk in both keys}{60}
+\lv{5}{Two octaves, hands together, 8ths}{80}
+\lv{6}{Add D major (F\sh\ C\sh) and B\fl\ major (B\fl\ E\fl). Work out the notes yourself with W-W-H-W-W-W-H}{70}
+\lv{7}{Minor keys: G major's notes from E to E is \textbf{E minor}; F major's from D to D is \textbf{D minor}}{70}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Play in rhythm pattern C or F from Drill 1. Play step patterns 1-2-3-1, 2-3-4-2\ldots up the scale. Hands in opposite directions (start on the same note, move apart).
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+The melodies of both songs come almost entirely from these two scales. The \textbf{E minor} and \textbf{D minor} in L7 matter too: both songs keep leaning on their minor chord (Em and Dm).
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% SHEET 2+
+%======================================================================
+\sheethead{2+}{Scale Sheet}{The exact notes of every key you'll need. Keep it next to Drill 2.}{\textbf{Use with:} Drills 2, 9 and 10 \quad\textbf{Answers:} ``Which notes am I allowed to play in this key?''}
+
+\begin{why}[Three rules that answer ``which notes?'']
+\textbf{1. A key uses exactly 7 notes, one of each letter A B C D E F G, in order.} A scale never skips a letter and never uses a letter twice. G major can't contain both F and F\sh, so its 7th note is F\sh\ \emph{instead of} F.\\[0.8mm]
+\textbf{2. The step pattern decides which letters get a \sh\ or \fl:} W-W-H-W-W-W-H (whole, whole, half, whole, whole, whole, half). The keyboard already has two built-in half steps with no black key between them: \textbf{E--F} and \textbf{B--C}. When the pattern needs a whole step there, or a half step somewhere else, a black key fills in.\\[0.8mm]
+\textbf{3. Once you know the 7 notes, those are the only notes of the key.} Improvise, write melodies and build chords (Sheet 3+) from that row only. Anything else is ``outside'' and sounds tense unless you mean it.
+\end{why}
+
+\sect{Worked example: building D major}
+\begin{center}\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{c c c c c c c c c c c c c c c}
+\textbf{D} & $\xrightarrow{\text{W}}$ & \textbf{E} & $\xrightarrow{\text{W}}$ & \textbf{\alt{F\sh}} & $\xrightarrow{\text{H}}$ & \textbf{G} & $\xrightarrow{\text{W}}$ & \textbf{A} & $\xrightarrow{\text{W}}$ & \textbf{B} & $\xrightarrow{\text{W}}$ & \textbf{\alt{C\sh}} & $\xrightarrow{\text{H}}$ & \textbf{D} \\
+1 && 2 && 3 && 4 && 5 && 6 && 7 && 1 \\
+\end{tabular}
+\end{center}
+{\small E to F is only a half step, but the pattern needs a whole step, so step 3 becomes \textbf{F\sh}. B to C is a half step, but steps 6 to 7 need a whole step, so step 7 becomes \textbf{C\sh}. That's why D major has two sharps. Every key works the same way.}
+
+\sect{The keys on the keyboard (black dots = the 7 notes; triangle = step 1)}
+\begin{center}
+\begin{minipage}[t]{0.185\linewidth}\centering\textbf{C major}\\[0.6mm]
+\kbdw[0.32]{0}{8}{0/C,2/D,4/E,5/F,7/G,9/A,11/B,12/C}{0,12}\end{minipage}\hfill
+\begin{minipage}[t]{0.185\linewidth}\centering\textbf{G major}\\[0.6mm]
+\kbdw[0.32]{4}{8}{7/G,9/A,11/B,12/C,14/D,16/E,18/F\sh,19/G}{7,19}\end{minipage}\hfill
+\begin{minipage}[t]{0.185\linewidth}\centering\textbf{D major}\\[0.6mm]
+\kbdw[0.32]{1}{8}{2/D,4/E,6/F\sh,7/G,9/A,11/B,13/C\sh,14/D}{2,14}\end{minipage}\hfill
+\begin{minipage}[t]{0.185\linewidth}\centering\textbf{F major}\\[0.6mm]
+\kbdw[0.32]{3}{8}{5/F,7/G,9/A,10/B\fl,12/C,14/D,16/E,17/F}{5,17}\end{minipage}\hfill
+\begin{minipage}[t]{0.2\linewidth}\centering\textbf{B\fl\ major}\\[0.6mm]
+\kbdw[0.32]{5}{9}{10/B\fl,12/C,14/D,15/E\fl,17/F,19/G,21/A,22/B\fl}{10,22}\end{minipage}
+\end{center}
+
+\sect{The eight keys worth knowing (the notes with \sh\ or \fl\ are in bold)}
+\begin{center}\small
+\renewcommand{\arraystretch}{1.22}
+\begin{tabular}{@{}l l *{7}{c} l l@{}}
+\toprule
+\textbf{Key} & \textbf{Signature} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{Same notes as} & \textbf{Used in} \\ \midrule
+C major & none & C & D & E & F & G & A & B & A minor & Drills 1, 4, 10 \\
+G major & 1\sh: F & G & A & B & C & D & E & \alt{F\sh} & E minor & \textbf{The Loneliest Girl} \\
+D major & 2\sh: F C & D & E & \alt{F\sh} & G & A & B & \alt{C\sh} & B minor & \\
+A major & 3\sh: F C G & A & B & \alt{C\sh} & D & E & \alt{F\sh} & \alt{G\sh} & F\sh\ minor & \\
+E major & 4\sh: F C G D & E & \alt{F\sh} & \alt{G\sh} & A & B & \alt{C\sh} & \alt{D\sh} & C\sh\ minor & \\ \midrule
+F major & 1\fl: B & F & G & A & \alt{B\fl} & C & D & E & D minor & \textbf{The Scientist} \\
+B\fl\ major & 2\fl: B E & \alt{B\fl} & C & D & \alt{E\fl} & F & G & A & G minor & \\
+E\fl\ major & 3\fl: B E A & \alt{E\fl} & F & G & \alt{A\fl} & \alt{B\fl} & C & D & C minor & \\
+\bottomrule
+\end{tabular}
+\end{center}
+{\small Sharps always arrive in the order \textbf{F C G D}, flats in the order \textbf{B E A D}. ``Same notes as'' is the key's relative minor: the same 7 notes, with home on step 6 instead of step 1.}
+
+\sect{Reading the key signature}
+{\small The \sh\ or \fl\ signs at the start of every line are the key signature. A \sh\ on the F line means \emph{every} F in the piece is F\sh, in every octave, unless a note is marked otherwise.}
+
+\begin{lilypond}[staffsize=17]
+\score {
+  <<
+    \new Staff {
+      \key g \major g'8^\markup\bold "G major" a' b' c'' d'' e'' fis'' g'' \bar "||"
+      \key d \major d'8^\markup\bold "D major" e' fis' g' a' b' cis'' d'' \bar "||"
+      \key f \major f'8^\markup\bold "F major" g' a' bes' c'' d'' e'' f'' \bar "||"
+      \key bes \major bes'8^\markup\bold "B-flat major" c'' d'' ees'' f'' g'' a'' bes'' \bar "|."
+    }
+    \new NoteNames \with { noteNameFunction = #(lambda (pitch ctx) (note-name->markup pitch #f)) } {
+      g'8 a' b' c'' d'' e'' fis'' g'' d' e' fis' g' a' b' cis'' d''
+      f' g' a' bes' c'' d'' e'' f'' bes' c'' d'' ees'' f'' g'' a'' bes''
+    }
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{How to use this in Drill 2}\small
+Pick today's key from the table. Before playing, say its 7 notes out loud (``G A B C D E F\sh''). Then play only those. If a note sounds wrong in the free-play minute, check it against the row.
+\end{plainbox}
+\begin{plainbox}{Self-test}\small
+Cover the table. Build A major and E\fl\ major with W-W-H-W-W-W-H, the way D major is built above, then check. When you can do any row in under a minute, you know how keys work.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 3
+%======================================================================
+\drillhead{3}{Chord Staircase}{Stack thirds on every scale note and you get the seven chords of the key.}{\textbf{Needs:} Drill 2 L4 \quad\textbf{Skills:} intervals, major/minor triads, the number system \quad\textbf{Gate:} L4}
+
+\begin{why}
+An \textbf{interval} is a distance counted in half steps. The one that matters most is the \textbf{third}:
+\textbf{major third = 4 half steps} (bright), \textbf{minor third = 3 half steps} (darker).
+A \textbf{triad} is two thirds stacked: root + 3rd + 5th, which is ``skip a note, skip a note'' in the scale.
+Build a triad on every step of a major scale, using only notes of that scale, and you always get the same pattern:
+\textbf{major, minor, minor, major, major, minor, diminished}. Name them with Roman numerals: I ii iii IV V vi vii\dimc.
+When producers say ``it's a 6-4-1-5'', this is what they mean. The numbers work in any key, so one progression can be moved anywhere. \textbf{The notes of every chord, sharps and flats included, are on Sheet 3+, the next page.}
+\end{why}
+
+\begin{center}
+\begin{minipage}[t]{0.33\linewidth}\centering
+\textbf{Major 3rd}: C to E = 4 half steps\\[1mm]
+\kbd[0.27]{1}{0/R,1/1,2/2,3/3,4/4}{0}
+\end{minipage}\hspace{6mm}
+\begin{minipage}[t]{0.33\linewidth}\centering
+\textbf{Minor 3rd}: A to C = 3 half steps\\[1mm]
+\kbd[0.27]{1}{9/R,10/1,11/2,12/3}{9}
+\end{minipage}\hspace{6mm}
+\begin{minipage}[t]{0.22\linewidth}\small
+Major chord = major 3rd, then minor 3rd on top.\\[0.8mm]
+Minor chord = minor 3rd, then major 3rd.
+\end{minipage}
+\end{center}
+
+\sect{The staircase in G (right hand, fingers 1-3-5 for every chord)}
+\begin{lilypond}[staffsize=20]
+\score {
+  <<
+    \new ChordNames \chordmode { g4 a:m b:m c d e:m fis:dim g }
+    \new Staff {
+      \key g \major
+      <g' b' d''>4 <a' c'' e''> <b' d'' fis''> <c'' e'' g''> |
+      <d'' fis'' a''> <e'' g'' b''> <fis'' a'' c'''> <g'' b'' d'''> \bar "|."
+    }
+    \addlyrics { "I" "ii" "iii" "IV" "V" "vi" "vii°" "I" }
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\begin{center}\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{l|ccccccc}
+ & \textbf{I} & \textbf{ii} & \textbf{iii} & \textbf{IV} & \textbf{V} & \textbf{vi} & \textbf{vii\dimc} \\ \hline
+C major & C & Dm & Em & F & G & Am & B\dimc \\
+G major & G & Am & Bm & C & D & Em & F\sh\dimc \\
+F major & F & Gm & Am & B\fl & C & Dm & E\dimc \\
+\end{tabular}
+\end{center}
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{Hear the thirds.} On white keys play C--E, D--F, E--G, F--A\ldots\ together. Say ``bright'' (major 3rd) or ``dark'' (minor 3rd) for each, then count half steps to check.
+\at{1:00--2:30}{Staircase} up and down in C, then G or F. Say each chord's name and number. Left hand adds the root, low.
+\at{2:30--4:00}{Number game.} Say a random number from 1 to 6, find that chord in G within 2 seconds, then do the same in F.
+\at{4:00--5:00}{Play the songs from numbers.}
+In G: \textbf{vi -- IV -- I -- iii} = Em -- C -- G -- Bm: the verse of \emph{The Loneliest Girl}.
+In F: \textbf{vi -- IV -- I -- I} = Dm -- B\fl\ -- F -- F: \emph{The Scientist}. Loop each 4 times, slowly.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{Staircase in C, up and down, naming chords aloud}{60}
+\lv{2}{Staircase in G and F}{60}
+\lv{3}{Left-hand root with every chord}{60}
+\lv{4}{\textbf{Gate.} Number game: any chord in G or F in under 2 seconds}{---}
+\lv{5}{Staircase in D and B\fl; write the table row yourself first}{60}
+\lv{6}{Broken staircase: each chord as root-3rd-5th-3rd in 8ths}{70}
+\lv{7}{Say any 4 numbers (e.g.\ 1-5-6-4) and play them in any key you know}{---}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Close your eyes for the number game. Left hand plays the staircase too. Find the vi chord of every key you know: that is the key's \textbf{relative minor}.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+Both songs are 4-chord loops written in this number system. The iii chord (Bm in G) is what gives The Loneliest Girl's verse its bittersweet sound. Most pop uses I, IV, V and vi only.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% SHEET 3+
+%======================================================================
+\sheethead{3+}{Chord Sheet}{The exact notes in every chord, and why some of them are sharp or flat.}{\textbf{Use with:} Drills 3, 4, 11 and 12 \quad\textbf{Answers:} ``Is it F or F\sh\ in this chord?''}
+
+\begin{why}[Finding a chord's notes in three steps]
+\textbf{1. Letters first: skip a letter, twice.} Every triad is three letters, each one skipping the next. There are only seven letter patterns:
+\textbf{C-E-G \ D-F-A \ E-G-B \ F-A-C \ G-B-D \ A-C-E \ B-D-F.}\\[0.8mm]
+\textbf{2. Apply the key's sharps or flats} (Sheet 2+). \emph{Inside a key, a chord uses only that key's notes.} In G major every F is F\sh, so D-F-A becomes \textbf{D F\sh\ A}, B-D-F becomes \textbf{B D F\sh}, and F-A-C becomes \textbf{F\sh\ A C}. In F major every B is B\fl, so B-D-F becomes \textbf{B\fl\ D F} and G-B-D becomes \textbf{G B\fl\ D}.\\[0.8mm]
+\textbf{3. A chord name fixes its notes everywhere.} D major is \emph{always} D F\sh\ A, in any song and any key, because major means 4 + 3 half steps. Minor is 3 + 4. If a chart shows a chord that isn't in the key, trust the chord name and use the table at the bottom.
+\end{why}
+
+\sect{The chords of each key, with their notes (sharps and flats in bold)}
+\begin{center}\small
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l|c|c|c|c|c|c|c@{}}
+ & \textbf{I} & \textbf{ii} & \textbf{iii} & \textbf{IV} & \textbf{V} & \textbf{vi} & \textbf{vii\dimc} \\ \hline
+\multirow{2}{*}{\textbf{C major}} & \textbf{C} & \textbf{Dm} & \textbf{Em} & \textbf{F} & \textbf{G} & \textbf{Am} & \textbf{B\dimc} \\
+ & C E G & D F A & E G B & F A C & G B D & A C E & B D F \\ \hline
+\multirow{2}{*}{\textbf{G major}} & \textbf{G} & \textbf{Am} & \textbf{Bm} & \textbf{C} & \textbf{D} & \textbf{Em} & \textbf{F\sh\dimc} \\
+ & G B D & A C E & B D \alt{F\sh} & C E G & D \alt{F\sh} A & E G B & \alt{F\sh} A C \\ \hline
+\multirow{2}{*}{\textbf{D major}} & \textbf{D} & \textbf{Em} & \textbf{F\sh m} & \textbf{G} & \textbf{A} & \textbf{Bm} & \textbf{C\sh\dimc} \\
+ & D \alt{F\sh} A & E G B & \alt{F\sh} A \alt{C\sh} & G B D & A \alt{C\sh} E & B D \alt{F\sh} & \alt{C\sh} E G \\ \hline
+\multirow{2}{*}{\textbf{F major}} & \textbf{F} & \textbf{Gm} & \textbf{Am} & \textbf{B\fl} & \textbf{C} & \textbf{Dm} & \textbf{E\dimc} \\
+ & F A C & G \alt{B\fl} D & A C E & \alt{B\fl} D F & C E G & D F A & E G \alt{B\fl} \\ \hline
+\multirow{2}{*}{\textbf{B\fl\ major}} & \textbf{B\fl} & \textbf{Cm} & \textbf{Dm} & \textbf{E\fl} & \textbf{F} & \textbf{Gm} & \textbf{A\dimc} \\
+ & \alt{B\fl} D F & C \alt{E\fl} G & D F A & \alt{E\fl} G \alt{B\fl} & F A C & G \alt{B\fl} D & A C \alt{E\fl} \\
+\end{tabular}
+\end{center}
+{\small The same chord can live in several keys: Em is vi in G, iii in C and ii in D, and its notes are always E G B. Chords made only of white keys (C, Dm, Em, F, G, Am) turn up in many keys.}
+
+\sect{Major or minor: only the middle note moves, by one half step}
+\begin{center}
+\chordkey{D major}{1}{2/D,6/F\sh,9/A}{2}{4 + 3 half steps}\hfill
+\chordkey{D minor}{1}{2/D,5/F,9/A}{2}{3 + 4 half steps}\hfill
+\chordkey{A major}{5}{9/A,13/C\sh,16/E}{9}{A C\sh\ E}\hfill
+\chordkey{A minor}{5}{9/A,12/C,16/E}{9}{A C E}\hfill
+\chordkey{B minor}{6}{11/B,14/D,18/F\sh}{11}{B D F\sh\ (iii in G)}
+\end{center}
+
+\sect{Every major and minor chord (use it when a chord isn't in your key)}
+\begin{center}\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}l l l@{}}
+\toprule
+\textbf{Root} & \textbf{Major} & \textbf{Minor} \\ \midrule
+C & C E G & C \alt{E\fl} G \\
+C\sh / D\fl & D\fl: \alt{D\fl} F \alt{A\fl} & C\sh m: \alt{C\sh} E \alt{G\sh} \\
+D & D \alt{F\sh} A & D F A \\
+E\fl & \alt{E\fl} G \alt{B\fl} & \alt{E\fl} \alt{G\fl} \alt{B\fl} \\
+E & E \alt{G\sh} B & E G B \\
+F & F A C & F \alt{A\fl} C \\ \bottomrule
+\end{tabular}\hspace{10mm}
+\begin{tabular}{@{}l l l@{}}
+\toprule
+\textbf{Root} & \textbf{Major} & \textbf{Minor} \\ \midrule
+F\sh & \alt{F\sh} \alt{A\sh} \alt{C\sh} & \alt{F\sh} A \alt{C\sh} \\
+G & G B D & G \alt{B\fl} D \\
+A\fl\ / G\sh & A\fl: \alt{A\fl} C \alt{E\fl} & G\sh m: \alt{G\sh} B \alt{D\sh} \\
+A & A \alt{C\sh} E & A C E \\
+B\fl & \alt{B\fl} D F & \alt{B\fl} \alt{D\fl} F \\
+B & B \alt{D\sh} \alt{F\sh} & B D \alt{F\sh} \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{How to use this in Drill 3}\small
+Before each staircase chord, say its three letters out loud (``B, D, F-sharp''), then play it. Saying the notes is what makes them stick. After a week, try it without looking at the table.
+\end{plainbox}
+\begin{plainbox}{Quick check}\small
+Why is there no F\sh\ in any chord of C major? (C major has no sharps.) D and Dm both turn up in songs: which note tells them apart? (The middle one: F\sh\ in D, F in Dm.)
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 4
+%======================================================================
+\drillhead{4}{Lazy Hands}{Inversions: move each finger to the nearest note instead of jumping the whole hand.}{\textbf{Needs:} Drill 3 L4 \quad\textbf{Skills:} inversions, voice leading, both songs' chord loops \quad\textbf{Gate:} L4}
+
+\begin{why}
+You can stack a chord's three notes in any order. \textbf{Root position} has the root at the bottom (C-E-G). \textbf{1st inversion} puts the 3rd at the bottom (E-G-C). \textbf{2nd inversion} puts the 5th at the bottom (G-C-E). All three are still C major.
+Jumping from one root-position chord to the next sounds blocky and makes your hand leap. Pianists instead \textbf{keep notes that two chords share, and move the other notes by the smallest step}. This is \textbf{voice leading}, and it's why good piano parts sound smooth. In both songs the right hand barely moves, because the chords are voiced this way. The left hand plays the root, so the chord name stays clear.
+\end{why}
+
+\sect{Inversion climb}
+\begin{lilypond}[staffsize=19]
+\score {
+  \new Staff { \textLengthOn
+    <c' e' g'>4^\markup "root" <e' g' c''>^\markup "1st" <g' c'' e''>^\markup "2nd" <c'' e'' g''>^\markup "root" |
+    <g' c'' e''> <e' g' c''> <c' e' g'>2 \bar "|."
+  }
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{The Loneliest Girl loops (G major). Watch how little the right hand moves.}
+\begin{lilypond}[staffsize=19]
+\score {
+  <<
+    \new ChordNames \chordmode { e1:m c g b:m c g e:m d }
+    \new PianoStaff <<
+      \new Staff {
+        \key g \major
+        <e' g' b'>1^\markup\bold "verse  vi-IV-I-iii" <e' g' c''> <d' g' b'> <d' fis' b'> \bar "||"
+        <e' g' c''>^\markup\bold "chorus  IV-I-vi-V" <d' g' b'> <e' g' b'> <d' fis' a'> \bar "|."
+      }
+      \new Staff { \clef bass \key g \major e1 c g, b, c g, e d }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{The Scientist loop (F major)}
+\begin{lilypond}[staffsize=19]
+\score {
+  <<
+    \new ChordNames \chordmode { d1:m7 bes f f:sus2 bes f c c }
+    \new PianoStaff <<
+      \new Staff {
+        \key f \major
+        <c' f' a'>1^\markup\bold "verse  vi-IV-I-I" <d' f' bes'> <c' f' a'> <c' f' g'> \bar "||"
+        <d' f' bes'>^\markup\bold "chorus idea  IV-I-V" <c' f' a'> <c' e' g'> <c' e' g'> \bar "|."
+      }
+      \new Staff { \clef bass \key f \major d1 bes, f, f, bes, f, c c }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+{\small Right hand C-F-A over a D in the bass is \textbf{Dm7}. The Fsus2 bar swaps A for G: the top finger steps down and back up. Listen for it.}
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{Inversion climb} on C, then G, then F. Say ``root, first, second'' as you go.
+\at{1:00--2:30}{Loneliest Girl verse loop}, one chord per bar, left hand on the root. Look at the \emph{sheet}, not your hands.
+\at{2:30--4:00}{Find it yourself.} Take G -- D -- Em -- C (I--V--vi--IV). Start with G as G-B-D and find the nearest shape of each next chord. Aim for a top note that moves by a step or not at all.
+\at{4:00--5:00}{Play The Scientist loop} slowly (about 60), with the sustain pedal changed on each chord. It will sound like the record.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{Inversion climb in C, G, F}{60}
+\lv{2}{Climb every chord of the G staircase (Drill 3) in all three positions}{60}
+\lv{3}{Loneliest Girl verse + chorus loops, 4$\times$ each, eyes on the page}{70}
+\lv{4}{\textbf{Gate.} Scientist verse + chorus idea, 4$\times$ each, with pedal}{60}
+\lv{5}{Start each loop from a different shape of the first chord (3 versions of every loop)}{70}
+\lv{6}{Play the loops without the page, then with your eyes closed}{80}
+\lv{7}{Move the Loneliest Girl verse (vi-IV-I-iii) to C and to F, voicing it yourself}{70}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Two chords per bar. Left hand plays root \emph{octaves}. Play the loops in Drill 1 patterns C and F.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+This page \emph{is} the harmony of both songs. Drills 5--8 only add rhythm and colour on top.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 5
+%======================================================================
+\drillhead{5}{The Bass Engine}{Six left-hand patterns: the bass line of pop songs and electronic tracks.}{\textbf{Needs:} Drill 4 L3 \quad\textbf{Skills:} left-hand independence, bass patterns, 8th-note drive \quad\textbf{Gate:} L4}
+
+\begin{why}
+The \textbf{bass} is the lowest line, and it does two jobs. It tells the ear \textbf{which chord} is playing (usually by playing the root), and it \textbf{drives the rhythm}. In a track, bass and kick drum lock together into the groove.
+On piano the left hand is the bass player. Once it can run a pattern on autopilot, the right hand is free for chords and melody. The same patterns carry straight over to a bass synth: whole-note roots are a sub-bass, 8th-note roots are the Coldplay/rock drive, octaves are disco and French house, off-beats are trance and house.
+\end{why}
+
+\sect{Six patterns (shown on D; follow the chord roots when the chord changes)}
+\begin{lilypond}[staffsize=20]
+\score {
+  \new Staff {
+    \clef bass \key f \major \textLengthOn
+    d1^\markup\bold "B1 roots" |
+    d8^\markup\bold "B2 8th drive" d d d d d d d | \break
+    d,8^\markup\bold "B3 octaves" d d, d d, d d, d |
+    d8^\markup\bold "B4 1-5-8-5" a d' a d a d' a | \break
+    r8^\markup\bold "B5 off-beat" d r d r d r d |
+    d8^\markup\bold "B6 approach note" d d d d d d c | bes,1^\markup "(B-flat: next chord)" \bar "|."
+  }
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+{\small\textbf{Fingers:} B3 is 5 on the low note, 1 on the high note. B4 is 5-2-1-2. \textbf{B6:} on the last 8th, step to the note next to the \emph{next} root, so the bass line leads into the chord change.}
+
+\sect{The practice loop: Dm -- B\fl\ -- F -- C (F major, vi--IV--I--V)}
+{\small Left hand roots: \textbf{D -- B\fl\ -- F -- C}, one per bar. Right hand either rests or holds the Drill 4 chord shapes.}
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{B1 and B2} around the loop, metronome at 70. Make every 8th exactly the same volume.
+\at{1:00--3:00}{Pattern of the day} (B3, B4, B5 or B6) around the loop, 4 rounds. Count out loud.
+\at{3:00--4:00}{Hands together, minimum version.} The left hand runs the pattern. The right hand plays one whole-note chord per bar, using the shapes from Drill 4.
+\at{4:00--5:00}{Play.} Mix patterns: 4 bars of B2, then 4 of B4, then B5 \ldots\ You're a one-person band.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{B1, B2 around the loop, left hand alone}{70}
+\lv{2}{B3 and B4, left hand alone}{70}
+\lv{3}{B5: metronome clicks are the kick, you play between them}{90}
+\lv{4}{\textbf{Gate.} B2 + right-hand whole-note chords, Scientist loop}{73}
+\lv{5}{Loneliest Girl verse (Em--C--G--Bm) with B2 or B3}{100--112}
+\lv{6}{B6 approach notes into every chord change}{80}
+\lv{7}{Invent your own 1-bar bass rhythm and loop it 8 bars under chords}{any}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Swap B4's 8ths for 3-3-2 (Drill 1, pattern C). Play B2 staccato, then legato. Record the left hand into a DAW on a bass synth and loop it: that's a track foundation.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+\textbf{The Scientist}: soft, even B2 8ths is the engine of the song. \textbf{Loneliest Girl}: roots and octaves on the beat at 112. For more on bass and kick see \emph{Making Music} (DeSantis), ``Bass Lines and Kick Drums as a Single Composite'', p.\,158.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 6
+%======================================================================
+\drillhead{6}{Broken Chords}{Play the chord one note at a time and it starts to move. Lo-fi and ballad texture.}{\textbf{Needs:} Drill 4 L4 \quad\textbf{Skills:} right-hand arpeggios, even 8ths, swing feel \quad\textbf{Gate:} L4}
+
+\begin{why}
+A chord doesn't have to be struck all at once. Play its notes one after another (an \textbf{arpeggio}, or broken chord) and a single held harmony gets motion and a pulse. Piano ballads, lo-fi loops and the synth \textbf{arpeggiator} in your DAW all do this. The arpeggiator is exactly this drill, automated.
+Keep the hand in one shape and let the fingers do the work. Use the Drill 4 voicings so the shape barely changes between chords.
+\textbf{Swing:} lo-fi and hip-hop play 8ths long-short (``daa-da daa-da'') instead of even. It is the quickest way to make a loop sound lo-fi.
+\end{why}
+
+\sect{Four patterns on C (right hand)}
+\begin{lilypond}[staffsize=20]
+\score {
+  \new Staff { \textLengthOn
+    c'8-1^\markup\bold "P1 up-down" e'-2 g'-3 c''-5 g'-3 e'-2 c'-1 e'-2 |
+    c'8-1^\markup\bold "P2  1-5-8-5" g'-3 c''-5 g' c' g' c'' g' | \break
+    c'8-1^\markup\bold "P3 rocking" g'-5 e'-3 g' c' g' e' g' |
+    c'8-1^\markup\bold "P4 roll and ring" e'-2 g'-3 c''-5 ~ c''2 \bar "|."
+  }
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{Loop: Dm7 -- B\fl\ -- F -- C with P3, using Drill 4 shapes}
+\begin{lilypond}[staffsize=20]
+\score {
+  <<
+    \new ChordNames \chordmode { d1:m7 bes f c }
+    \new PianoStaff <<
+      \new Staff {
+        \key f \major
+        c'8 a' f' a' c' a' f' a' |
+        d' bes' f' bes' d' bes' f' bes' |
+        c' a' f' a' c' a' f' a' |
+        c' g' e' g' c' g' e' g' \bar ":|."
+      }
+      \new Staff { \clef bass \key f \major d1 bes, f, c }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{P1 on C}, then on Am, F, G (C -- Am -- F -- G). Even 8ths, metronome 60--70.
+\at{1:00--3:00}{Pattern of the day} (P2, P3 or P4) over the loop above, with the left hand on whole-note roots.
+\at{3:00--4:00}{Same pattern, swung.} Long-short, long-short. Slow down to 60--70.
+\at{4:00--5:00}{Lo-fi minute.} Tempo about 70, sustain pedal changed on each chord, soft touch, swing on. Mix P3 and P4. Record it: this is a usable lo-fi loop.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{P1 over C--Am--F--G, even}{70}
+\lv{2}{All four patterns, one chord each}{70}
+\lv{3}{P3 over the Dm7 loop above, hands together}{70}
+\lv{4}{\textbf{Gate.} Any pattern over both songs' loops (Drill 4 shapes)}{70}
+\lv{5}{Swing, and change pattern every 2 bars}{80}
+\lv{6}{16th notes: each pattern twice as fast}{60}
+\lv{7}{Left hand B2 8ths (Drill 5) + right-hand arpeggio}{70}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Invent a P5 from 4 chord notes in a new order (for example 3-1-5-1). Let the top note of each bar form a little tune. Play the arpeggio in the left hand instead.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+Broken chords fill the space when the melody rests in \textbf{The Scientist}. In a DAW, compare your P1 with the arpeggiator's ``up-down'' mode.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 7
+%======================================================================
+\drillhead{7}{Split the Beat}{Two hands, two rhythms. The pop-piano groove.}{\textbf{Needs:} Drills 1 (L5), 4 and 5 (L4) \quad\textbf{Skills:} hand independence, two-hand syncopation \quad\textbf{Gate:} L5}
+
+\begin{why}
+Hand independence isn't two brains. The trick is to learn \textbf{both hands as one combined rhythm}: on each slot of the bar, know whether it's left, right, both or nothing.
+The basic pop-piano recipe: \textbf{left hand keeps the beat} (roots on 1 2 3 4), \textbf{right hand syncopates} (3-3-2 hits, pushes). That tension between steady and off-beat is what makes it groove.
+\end{why}
+
+\sect{The four stages (L = left only, R = right only, B = both together)}
+\begin{center}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}l*{8}{G}l@{}}
+  & \bfseries1 & \bfseries\& & \bfseries2 & \bfseries\& & \bfseries3 & \bfseries\& & \bfseries4 & \bfseries\& & \\ \midrule
+\grow{\textbf{S1} Together}B.L.B.L. & \small right hand on 1 and 3 \\
+\grow{\textbf{S2} Double}BRBRBRBR & \small right-hand 8ths \\
+\grow{\textbf{S3} 3-3-2}B.LRL.B. & \small Drill 1 pattern C \\
+\grow{\textbf{S4} The push}B.L.B.LR & \small 4\& = next chord, held \\
+\end{tabular}
+\end{center}
+
+\sect{S3 on The Loneliest Girl verse (G major)}
+\begin{lilypond}[staffsize=16]
+\score {
+  <<
+    \new ChordNames \chordmode { e1:m c g b:m }
+    \new PianoStaff <<
+      \new Staff {
+        \key g \major
+        <e' g' b'>4. <e' g' b'>4. <e' g' b'>4 |
+        <e' g' c''>4. <e' g' c''>4. <e' g' c''>4 |
+        <d' g' b'>4. <d' g' b'>4. <d' g' b'>4 |
+        <d' fis' b'>4. <d' fis' b'>4. <d' fis' b'>4 \bar ":|."
+      }
+      \new Staff { \clef bass \key g \major e4 e e e | c c c c | g, g, g, g, | b, b, b, b, }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{S4: the push (right hand arrives half a beat early and holds across the bar line)}
+\begin{lilypond}[staffsize=16]
+\score {
+  <<
+    \new ChordNames \chordmode { e1:m c g b:m }
+    \new PianoStaff <<
+      \new Staff {
+        \key g \major
+        <e' g' b'>2 <e' g' b'>4. <e' g' c''>8 ~ |
+        <e' g' c''>2 <e' g' c''>4. <d' g' b'>8 ~ |
+        <d' g' b'>2 <d' g' b'>4. <d' fis' b'>8 ~ |
+        <d' fis' b'>2 <d' fis' b'>2 \bar "|."
+      }
+      \new Staff { \clef bass \key g \major e4 e e e | c c c c | g, g, g, g, | b, b, b, b, }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{Tap it first.} Tap today's stage on your knees (left knee = left hand). Say the counts.
+\at{1:00--3:00}{Play today's stage} on Em -- C -- G -- Bm. Start at 60. Stop and slow down if the left hand drifts off the beat.
+\at{3:00--4:00}{Same stage on the chorus loop} C -- G -- Em -- D (shapes from Drill 4).
+\at{4:00--5:00}{Play.} Verse 4 bars, chorus 4 bars, any stages you like. Hum along.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{S1 and S2 on the verse loop}{70}
+\lv{2}{S3 on the verse loop}{60}
+\lv{3}{S3 verse + chorus, no stops}{80}
+\lv{4}{S4 verse + chorus}{70}
+\lv{5}{\textbf{Gate.} S3 or S4, verse + chorus}{100}
+\lv{6}{Full Loneliest Girl tempo}{112}
+\lv{7}{Scientist texture: left hand B2 8ths, right hand held chords that change on the push}{73}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Left hand plays B3 octaves instead of quarters. Right hand plays S3 while the left does B5 off-beats. Sing the counts instead of saying them.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+This is the accompaniment for \textbf{The Loneliest Girl}. Once S4 is smooth at 112, the song's backing is in your hands. Adding its melody is the step after (see the song roadmap page).
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 8
+%======================================================================
+\drillhead{8}{Lo-fi Colours}{Add one more note: 7ths, sus2 and add9 turn plain chords into lo-fi chords.}{\textbf{Needs:} Drills 3 and 4 (L4) \quad\textbf{Skills:} 7th chords, sus and add9, rich voicings \quad\textbf{Gate:} L4}
+
+\begin{why}
+Stack one more third on a triad and you get a \textbf{7th chord}. Three kinds matter:
+\textbf{maj7} (dreamy, on I and IV), \textbf{m7} (soft, mellow, on ii, iii and vi) and \textbf{dominant 7} (tense, wants to move, on V).
+\textbf{sus2 / sus4} replace the 3rd with the 2nd or 4th. The chord then sounds open, neither happy nor sad. \textbf{add9} keeps the triad and adds the 9th (step 2, an octave up). Lo-fi uses mostly maj7, m7 and 9ths, played slowly and softly with swing.\\[0.8mm]
+\textbf{The shortcut:} left hand plays the root, right hand plays \textbf{the triad that starts on the 3rd}.
+Dm7 = D + F major triad. Fmaj7 = F + A minor triad. You already know every triad from Drill 3.
+\end{why}
+
+\begin{center}\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{l|ccccccc}
+ & \textbf{Imaj7} & \textbf{ii7} & \textbf{iii7} & \textbf{IVmaj7} & \textbf{V7} & \textbf{vi7} & \textbf{vii\o} \\ \hline
+C major & Cmaj7 & Dm7 & Em7 & Fmaj7 & G7 & Am7 & Bm7\fl5 \\
+F major & Fmaj7 & Gm7 & Am7 & B\fl maj7 & C7 & Dm7 & Em7\fl5 \\
+G major & Gmaj7 & Am7 & Bm7 & Cmaj7 & D7 & Em7 & F\sh m7\fl5 \\
+\end{tabular}
+\end{center}
+
+\sect{Lo-fi loop in C: IVmaj7 -- iii7 -- ii7 -- Imaj7 (right hand plays a triad, left hand the root)}
+\begin{lilypond}[staffsize=19]
+\score {
+  <<
+    \new ChordNames \with { majorSevenSymbol = \markup "maj7" } \chordmode { f1:maj7 e:m7 d:m7 c:maj7 }
+    \new PianoStaff <<
+      \new Staff {
+        <a' c'' e''>1^\markup "Am triad" <g' b' d''>^\markup "G" <f' a' c''>^\markup "F" <e' g' b'>^\markup "Em" \bar ":|."
+      }
+      \new Staff { \clef bass f,1 e, d, c, }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{Scientist colours (F major): the notes F and C ring through every chord}
+\begin{lilypond}[staffsize=19]
+\score {
+  <<
+    \new ChordNames \chordmode { d1:m7 \once \override ChordName.text = \markup \concat { "B" \hspace #0.2 \fontsize #-2 \raise #0.7 \flat "add9" } bes:9^7 f f:sus2 }
+    \new PianoStaff <<
+      \new Staff {
+        \key f \major
+        <c' f' a'>1 <d' f' c''> <c' f' a'> <c' f' g'> \bar ":|."
+      }
+      \new Staff { \clef bass \key f \major d1 bes, f, f, }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{7th staircase in C.} Play each triad, then add the 7th on top. Say ``dreamy'', ``soft'' or ``tense'' for each.
+\at{1:00--3:00}{Lo-fi loop} above, 4 rounds. Then arpeggiate it with a Drill 6 pattern, swung.
+\at{3:00--4:00}{Scientist colours.} Compare Dm7 with a plain Dm, and B\fl add9 with a plain B\fl.
+\at{4:00--5:00}{Lo-fi minute.} Tempo 70, pedal, soft. Pick a loop and hold each chord 2 bars. Improvise slowly with the top note.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{Build all seven 7ths in C by stacking thirds}{---}
+\lv{2}{Lo-fi loop, using the triad-on-the-3rd shortcut}{70}
+\lv{3}{Scientist colours loop}{60}
+\lv{4}{\textbf{Gate.} Loneliest Girl verse as Em7 -- Cmaj7 -- Gmaj7 -- Bm7 in G}{70}
+\lv{5}{ii7--V7--Imaj7 in C, F and G (Dm7--G7--Cmaj7 \ldots)}{70}
+\lv{6}{9th chords: Cmaj9 = C + Em7 on top. Find Fmaj9 and Dm9}{---}
+\lv{7}{Any loop, arpeggiated and swung, plus Drill 5 bass}{75}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Play sus4 then resolve to the plain chord (Csus4 $\to$ C), as The Scientist's chorus does on C. Invert the right-hand triads (Drill 4) so the top note moves by step.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+Chord charts of \textbf{The Scientist} are full of sus2 and add9: that's this page. For \textbf{lo-fi} this page is most of the harmony you'll need.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 9
+%======================================================================
+\drillhead{9}{No Wrong Notes}{Improvise with 5 safe notes, then learn to aim for the right one.}{\textbf{Needs:} Drills 2 and 5 (L4) \quad\textbf{Skills:} pentatonic scale, target notes, phrasing \quad\textbf{Gate:} L4}
+
+\begin{why}
+The \textbf{major pentatonic} is the major scale without steps 4 and 7, which leaves \textbf{1 2 3 5 6}. Steps 4 and 7 sit a half step from other notes and can clash against the chords. Take them out and almost anything you play over the I, IV, V and vi chords sounds fine. It's the safest scale there is for making up melodies.
+Start the same five notes on step 6 and you have the \textbf{minor pentatonic}: G major pentatonic = E minor pentatonic.
+Then the one rule that makes improvising sound deliberate: \textbf{target notes}. On beat 1 of each bar, land on a note of the current chord. Between those, anything from the scale.
+\end{why}
+
+\begin{center}
+\begin{minipage}[t]{0.48\linewidth}\centering
+\textbf{G major pentatonic}: G A B D E\\[1mm]
+\kbd[0.36]{2}{7/1,9/2,11/3,14/5,16/6,19/1,21/2,23/3}{7,19}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}\centering
+\textbf{F major pentatonic}: F G A C D\\[1mm]
+\kbd[0.36]{2}{5/1,7/2,9/3,12/5,14/6,17/1,19/2,21/3}{5,17}
+\end{minipage}
+\end{center}
+
+\sect{Example: 4 bars over the Loneliest Girl verse. \textnormal{(Marked notes are targets, chord notes on beat 1.)}}
+\begin{lilypond}[staffsize=20]
+\score {
+  <<
+    \new ChordNames \chordmode { e1:m c g b:m }
+    \new PianoStaff <<
+      \new Staff {
+        \key g \major
+        b'4.-^ a'8 g'4 e' | e'4-^ g'8 a' g'2 | d''4.-^ b'8 a'4 g' | b'2.-^ r4 \bar "|."
+      }
+      \new Staff { \clef bass \key g \major e1 c g, b, }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{Today's rule (pick one, keep it the whole session)}
+{\small\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{@{}X@{\hspace{5mm}}X@{}}
+\textbf{R1 Three notes.} Only steps 1, 2, 3. All the interest has to come from rhythm. &
+\textbf{R4 Talk and listen.} Play 2 bars, rest 2 bars. The rest is part of the music. \\
+\textbf{R2 Neighbours.} All five notes, but only step to the next one; no jumps. &
+\textbf{R5 One rhythm.} Keep the same rhythm every bar, change only the notes. \\
+\textbf{R3 Targets.} Beat 1 of every bar lands on a chord note. &
+\textbf{R6 Full scale.} Add steps 4 and 7 as passing notes between pentatonic notes. \\
+\end{tabularx}}
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{Scale warm-up.} Pentatonic up and down, 2 octaves, in today's key.
+\at{1:00--2:00}{Start the loop.} Left hand loops roots or B2 (Drill 5): Em -- C -- G -- Bm in G, or Dm -- B\fl\ -- F -- C in F.
+\at{2:00--5:00}{Improvise with today's rule.} Don't stop for mistakes. Record the whole thing. If 2 bars sound good, write them down: that's a \textbf{motif} for Drill 10.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{R1 and R2 over the G loop, left hand on whole notes}{70}
+\lv{2}{R3 over the G loop}{70}
+\lv{3}{R1--R3 over the F (Scientist) loop}{70}
+\lv{4}{\textbf{Gate.} R4 and R5, both keys, left hand playing B2 8ths}{80}
+\lv{5}{E minor and D minor pentatonic over the same loops}{80}
+\lv{6}{R6 with swing over the lo-fi loop (Drill 8)}{75}
+\lv{7}{New key each week: work out its pentatonic with Drill 2}{any}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Hum first, then find it on the keys. Keep the melody inside 5 notes, then stretch it over 2 octaves. Improvise over the S3 groove from Drill 7.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+Both songs' melodies mostly use these pentatonic notes and land on chord notes at the chord changes. Learning them later will feel familiar.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 10
+%======================================================================
+\drillhead{10}{Build a Tune}{One small idea, repeated and changed, becomes an 8-bar melody.}{\textbf{Needs:} Drill 9 (L4) \quad\textbf{Skills:} motif, variation, question and answer \quad\textbf{Gate:} none; keep it in rotation}
+
+\begin{why}
+Melodies are rarely invented note by note. They grow from a \textbf{motif}: 3 to 5 notes with a recognisable \textbf{shape} (up, up, down\ldots) and \textbf{rhythm}. The motif gets \textbf{repeated} (so it's memorable) and \textbf{varied} (so it isn't boring).\\[0.6mm]
+\textbf{Four variation tools:} repeat it exactly; move it up or down to fit the next chord (same shape); keep the rhythm but change the notes; keep the notes but change the rhythm.\\[0.6mm]
+\textbf{Question and answer:} a 4-bar phrase that ends away from home (on step 2 or 5) sounds like a question. Repeat it, but end on step 1 or 3, and it sounds like the answer. Give the whole melody one \textbf{peak}, its highest note, once.
+See \emph{Making Music} (DeSantis), ``Creating Melodies 1: Contour'' p.\,178 and ``2: Using Motives'' p.\,182.
+\end{why}
+
+\sect{Example in C over C -- Am -- F -- G \,|\, C -- Am -- F -- C}
+\begin{lilypond}[staffsize=20]
+\score {
+  <<
+    \new ChordNames \chordmode { c1 a:m f g c a:m f c }
+    \new PianoStaff <<
+      \new Staff {
+        e'8^\markup\bold "motif" g' a'4 g'2 |
+        c'8^\markup "same shape, lower" e' f'4 e'2 |
+        a'8^\markup "same shape, peak" c'' d''4 c''2 |
+        b'4^\markup "question: ends on D" a'8 g' d'2 | \break
+        e'8^\markup\bold "repeat" g' a'4 g'2 |
+        c'8 e' f'4 e'2 |
+        a'8 c'' d''4 c''2 |
+        e'4^\markup "answer: ends on C" d'8 c' ~ c'2 \bar "|."
+      }
+      \new Staff { \clef bass c1 a, f, g, c a, f, c }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{Make a motif.} 3--5 notes from the pentatonic, one rhythm. Hum it until you can remember it without the keys.
+\at{1:00--3:00}{Build 4 bars} over the loop. Bar 1 motif. Bar 2 same shape, moved to fit the chord. Bar 3 same rhythm, new notes, reach the peak. Bar 4 ends on step 2 or 5: the question.
+\at{3:00--4:00}{Answer it.} Play bars 1--4 again and rewrite the last bar to land on step 1.
+\at{4:00--5:00}{Record the 8 bars and give the tune a name.} Write the notes into a ``motif notebook''. After a month you'll have 20 ideas to use.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{4-bar question over C -- Am -- F -- G, right hand only}{70}
+\lv{2}{Full 8 bars (question + answer)}{70}
+\lv{3}{Left hand plays roots or B2 while you play the melody}{70}
+\lv{4}{Over the lo-fi loop (Drill 8), swung, arpeggio fill in the rests}{70}
+\lv{5}{In minor: A minor or E minor pentatonic, ending on step 1 of the minor key}{70}
+\lv{6}{Write a bass line that moves against the melody (melody up, bass down); DeSantis p.\,186}{70}
+\lv{7}{DAW sketch: melody on a lead synth, chords on a pad, bass on a bass synth}{---}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Start the motif on an ``\&'' instead of beat 1 (Drill 1). Use two motifs, A and B, in the form A B A B$'$. Take 2 bars from a song you like, change one thing, and see where it leads.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+Look at the melodies of both songs through this page: find the motif, the repeats, the peak, where the question ends and where the answer ends. You'll learn them faster, and they'll feed your own writing.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 11
+%======================================================================
+\drillhead{11}{The Big Five Progressions}{Five chord loops behind a huge share of pop, EDM, lo-fi and anime. Learn them as numbers.}{\textbf{Needs:} Drill 4 (L4) \quad\textbf{Skills:} progressions, chord function, transposing \quad\textbf{Gate:} L3}
+
+\begin{why}
+A \textbf{progression} is an order of chords, usually looped. Most songs reuse a few favourites, so learning them pays off twice: you can write with them, and you recognise them in songs you want to learn.
+Each chord has a job, called its \textbf{function}:
+\textbf{I} = home, settled. \textbf{vi} = home, but sad. \textbf{IV} = lift, moving away. \textbf{V} = tension that pulls back to I. \textbf{ii} = soft set-up for V. \textbf{iii} = bittersweet, in between.
+A progression is a little story of leaving home and coming back. Learn each loop as \textbf{numbers}, then play it in any key by looking up the numbers (Drill 3 table).
+\end{why}
+
+\begin{center}\footnotesize
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\linewidth}{@{}l l l l l l >{\raggedright\arraybackslash}X@{}}
+\toprule
+ & \textbf{Name} & \textbf{Numbers} & \textbf{C major} & \textbf{G major} & \textbf{F major} & \textbf{Sound, where} \\ \midrule
+\textbf{P1} & Pop axis & I -- V -- vi -- IV & C G Am F & G D Em C & F C Dm B\fl & bright pop \\
+\textbf{P2} & Sad axis & vi -- IV -- I -- V & Am F C G & Em C G D & Dm B\fl\ F C & emotional, EDM \\
+\textbf{P3} & Fifties & I -- vi -- IV -- V & C Am F G & G Em C D & F Dm B\fl\ C & ballads \\
+\textbf{P4} & Two-five-one & ii7 -- V7 -- Imaj7 & Dm7 G7 Cmaj7 & Am7 D7 Gmaj7 & Gm7 C7 Fmaj7 & jazz, lo-fi \\
+\textbf{P5} & Royal Road & IVmaj7 -- V7 -- iii7 -- vi & Fmaj7 G7 Em7 Am & Cmaj7 D7 Bm7 Em & B\fl maj7 C7 Am7 Dm & J-pop, anime \\
+\bottomrule
+\end{tabularx}
+\end{center}
+{\small P1, P2 and P3 use the same four chords in different orders. P2 is also the minor-key favourite of trance and EDM: in A minor it reads i -- VI -- III -- VII.}
+
+\sect{P1 and P5 in C, voiced the Drill 4 way (right hand moves by steps)}
+\begin{lilypond}[staffsize=15]
+\score {
+  <<
+    \new ChordNames \with { majorSevenSymbol = \markup "maj7" } \chordmode { c1 g a:m f f:maj7 g:7 e:m7 a:m7 }
+    \new PianoStaff <<
+      \new Staff {
+        <e' g' c''>1^\markup\bold "P1  I-V-vi-IV" <d' g' b'> <e' a' c''> <f' a' c''> \bar "||" \break
+        <e' a' c''>^\markup\bold "P5  IVmaj7-V7-iii7-vi7" <f' b' d''> <g' b' d''> <g' c'' e''> \bar ":|."
+      }
+      \new Staff { \clef bass c1 g, a, f, f, g, e, a, }
+    >>
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{P1 in C} with the voicing above, saying the numbers out loud: ``one, five, six, four''.
+\at{1:00--3:00}{Progression of the day.} Rotate P1 to P5, one per day. Play it in C, then in G or F using the table. Find smooth voicings yourself (top note moves by a step or stays).
+\at{3:00--4:00}{Give it a groove.} Same loop with a Drill 1 rhythm or the Drill 7 S3 groove.
+\at{4:00--5:00}{Hum over it.} Loop the progression and hum a melody. Every progression suggests a different mood; notice which one you like best.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{P1 and P2 in C, smooth voicings, left-hand root}{70}
+\lv{2}{All five in C}{70}
+\lv{3}{\textbf{Gate.} All five in G and F from the table}{70}
+\lv{4}{Each with a groove (Drill 1 pattern C or Drill 7 S3)}{90}
+\lv{5}{P2 in minor keys: A minor, E minor, D minor (i -- VI -- III -- VII)}{80}
+\lv{6}{Transpose any loop to D and B\fl\ without the table, from the numbers only}{70}
+\lv{7}{Ear test: name the progression in 5 songs you like (start with the two target songs)}{---}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Two chords per bar. Play P4 in every key you know. Swap one chord for its colour version (Drill 12): C $\to$ Cadd9, G $\to$ Gsus4 then G. Write a 4-bar melody over P5 (Drill 10).
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+\textbf{The Scientist} verse is P2 without the V (vi--IV--I). \textbf{The Loneliest Girl} chorus is IV--I--vi--V, the P1 chords in a new order; its pre-chorus ends IV--I--ii--V, a P4 cousin.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% DRILL 12
+%======================================================================
+\drillhead{12}{Chord Vocabulary}{The chord shapes both songs need, and the nine chord types behind almost every chord symbol.}{\textbf{Needs:} Drill 3 (L4) \quad\textbf{Skills:} fast chord shapes, chord types, reading chord symbols \quad\textbf{Gate:} L3}
+
+\begin{why}
+You don't need hundreds of chords. Every chord symbol is a \textbf{root} plus a \textbf{recipe} of steps from that root's major scale (Drill 2).
+C = steps 1-3-5 of C major. Cm = 1-\fl3-5 (step 3 lowered by a half step). Cmaj7 = 1-3-5-7. With \textbf{nine recipes} and any root you can build almost any chord you'll meet in pop, lo-fi or EDM.
+The nine shapes below are \textbf{every chord both target songs use}. They should come instantly, without thinking about the notes. That is what makes songs feel easy.
+\end{why}
+
+\sect{The nine song chords (R = root, 3 = third, 5 = fifth; right hand fingers 1-3-5)}
+\begin{center}
+\chordkey{C}{0}{0/R,4/3,7/5}{0}{I in C, V in F}\hfill
+\chordkey{D}{1}{2/R,6/3,9/5}{2}{V in G}\hfill
+\chordkey{F}{3}{5/R,9/3,12/5}{5}{I in F, IV in C}\hfill
+\chordkey{G}{4}{7/R,11/3,14/5}{7}{I in G, V in C}\hfill
+\chordkey{B\fl}{5}{10/R,14/3,17/5}{10}{IV in F}\\[2mm]
+\chordkey{Dm}{1}{2/R,5/3,9/5}{2}{vi in F}\hfill
+\chordkey{Em}{2}{4/R,7/3,11/5}{4}{vi in G}\hfill
+\chordkey{Am}{5}{9/R,12/3,16/5}{9}{ii in G, vi in C}\hfill
+\chordkey{Bm}{6}{11/R,14/3,18/5}{11}{iii in G}\hfill
+\begin{minipage}[t]{0.19\linewidth}\small\vspace{3mm}
+Major: 4 + 3 half steps.\\ Minor: 3 + 4.\\ Black keys: F\sh\ in D and Bm, B\fl\ in B\fl.
+\end{minipage}
+\end{center}
+
+\sect{The nine recipes, all on C (the numbers under the notes are the recipe)}
+\begin{lilypond}[staffsize=18]
+\score {
+  <<
+    \new ChordNames \with { majorSevenSymbol = \markup "maj7" } \chordmode {
+      c1 c:m c:sus2 c:sus4
+      \once \override ChordName.text = \markup "Cadd9" c:9^7
+      c:maj7 c:7 c:m7 c:dim }
+    \new Staff {
+      \textLengthOn
+      <c' e' g'>1^\markup "bright" <c' ees' g'>^\markup "sad" <c' d' g'>^\markup "open" <c' f' g'>^\markup "hanging"
+      <c' e' g' d''>^\markup "sparkly" <c' e' g' b'>^\markup "dreamy" <c' e' g' bes'>^\markup "tense" <c' ees' g' bes'>^\markup "mellow" <c' ees' ges'>^\markup "uneasy" \bar "|."
+    }
+    \new Lyrics \lyricmode {
+      "1 3 5"1
+      \markup { 1 \concat { \fontsize #-2 \raise #0.5 \flat 3 } 5 }1
+      "1 2 5"1 "1 4 5"1 "1 3 5 9"1 "1 3 5 7"1
+      \markup { 1 3 5 \concat { \fontsize #-2 \raise #0.5 \flat 7 } }1
+      \markup { 1 \concat { \fontsize #-2 \raise #0.5 \flat 3 } 5 \concat { \fontsize #-2 \raise #0.5 \flat 7 } }1
+      \markup { 1 \concat { \fontsize #-2 \raise #0.5 \flat 3 } \concat { \fontsize #-2 \raise #0.5 \flat 5 } }1
+    }
+  >>
+  \layout { indent = 0 ragged-right = ##f }
+}
+\end{lilypond}
+
+{\small\textbf{Where you meet them:} major and minor everywhere; sus2 and add9 in The Scientist and pop piano; sus4 resolving to major at the end of phrases; maj7 and m7 in lo-fi (Drill 8); 7 on the V chord; dim as a passing chord between two others.}
+
+\sect{The 5 minutes}
+\begin{plan}
+\at{0:00--1:00}{Shape run.} The nine song chords in random order, eyes on the page, not on your hands. One per beat at 60.
+\at{1:00--3:00}{Recipe ladder} on the root of the day (rotate C, G, F, D, A, E). Play all nine types and say each sound word.
+\at{3:00--4:00}{Chord quiz.} Pick a root and a type at random and play it within 2 seconds. Say the notes aloud.
+\at{4:00--5:00}{Play.} Take P1 from Drill 11 and colour it: Cadd9 -- Gsus4 G -- Am7 -- Fmaj7. Loop it slowly with pedal.
+\end{plan}
+
+\begin{ladder}
+\lv{1}{The nine song chords, root position, right hand then left hand}{60}
+\lv{2}{The nine song chords in all three positions (Drill 4)}{60}
+\lv{3}{\textbf{Gate.} Recipe ladder on C, G and F}{---}
+\lv{4}{Recipe ladder on D, A, E and B\fl}{---}
+\lv{5}{Chord quiz on any white-key root in under 2 seconds}{---}
+\lv{6}{Slash chords: C/E, G/B, Am/G (chord over a different bass note). Play C -- G/B -- Am -- Am/G -- F}{70}
+\lv{7}{Black-key roots: E\fl, A\fl, D\fl, F\sh; all 12 major and minor chords}{---}
+\end{ladder}
+
+\begin{tcbraster}[raster columns=2, raster equal height, raster column skip=3mm, raster before skip=2mm]
+\begin{plainbox}{Make it harder}\small
+Quiz with your eyes closed. Play every recipe in 1st inversion. Read chord symbols from any song chart and build each one from its recipe.
+\end{plainbox}
+\begin{plainbox}{Song link}\small
+With these nine shapes automatic, both songs are only a matter of rhythm and melody. For your own tracks, the recipe ladder is a menu of moods: swap a plain chord for sus2, add9 or maj7 and listen.
+\end{plainbox}
+\end{tcbraster}
+
+%======================================================================
+% SONG ROADMAP
+%======================================================================
+\clearpage
+\noindent{\fontsize{22}{26}\selectfont\bfseries Song Roadmap}\\[1mm]
+{\itshape How the drills add up to the two songs. Chords only; learn the melodies from licensed sheet music or a tutorial.}\par
+\vspace{1mm}\hrule height 1.2pt\vspace{2mm}
+
+\begin{plainbox}{The Scientist (Coldplay) \quad F major (one flat) \quad about 73 BPM \quad 4/4 \quad slow, even, pedalled}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Intro / verse} & \fbox{\,Dm7\,} \fbox{\,B\fl\ (add9)\,} \fbox{\,F\,} \fbox{\,F -- Fsus2\,} \quad = vi -- IV -- I -- I, repeated \\
+\textbf{Chorus} & Moves between \fbox{\,B\fl\,} and \fbox{\,F\,} (with Fmaj7 / F6 colours) and ends on \fbox{\,Csus4 -- C\,} \quad = IV -- I \ldots\ V \\
+\textbf{Texture} & Left hand: soft, even 8th-note roots (Drill 5, B2). Right hand: held chords voiced so F and C stay put (Drills 4 and 8). Melody sits on top in F major.\\
+\end{tabularx}
+\textbf{Build-up:}
+\begin{enumerate}[leftmargin=6mm,itemsep=0pt,topsep=1pt]
+\item Verse loop, left-hand whole-note roots, right-hand shapes from Drill 4. Pedal on each chord. (Drill 4 L4)
+\item Left hand switches to B2 8ths. Start at 60 and climb to 73. (Drill 5 L4)
+\item Colours: Dm7, B\fl add9, Fsus2 (Drill 8). Chorus: B\fl\ -- F, ending Csus4 $\to$ C.
+\item Melody: learn the right hand alone first, in phrases, over a backing of your own left hand. Then add the left hand with whole-note roots, then 8ths.
+\item Play along with the recording. Sing it while you play, if you like; it helps the phrasing.
+\end{enumerate}
+\end{plainbox}
+
+\begin{plainbox}{The Loneliest Girl (Carole \& Tuesday) \quad G major (one sharp) \quad about 112 BPM \quad 4/4 \quad pop groove}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Intro / verse} & \fbox{\,Em\,} \fbox{\,C\,} \fbox{\,G\,} \fbox{\,Bm\,} \quad = vi -- IV -- I -- iii \\
+\textbf{Pre-chorus} & \fbox{\,C\,} \fbox{\,G\,} \fbox{\,Em\,} \fbox{\,D\,} \quad \fbox{\,C\,} \fbox{\,G\,} \fbox{\,Am\,} \fbox{\,D\,} \quad = IV -- I -- vi -- V, \ IV -- I -- ii -- V \\
+\textbf{Chorus} & \fbox{\,C\,} \fbox{\,G\,} \fbox{\,Em\,} \fbox{\,D\,} \quad = IV -- I -- vi -- V \\
+\textbf{Texture} & Left hand on the beat (roots, octaves). Right hand chords on 3-3-2 hits and pushes (Drills 1 and 7). Melody in G major.\\
+\end{tabularx}
+\textbf{Build-up:}
+\begin{enumerate}[leftmargin=6mm,itemsep=0pt,topsep=1pt]
+\item All three loops with Drill 4 shapes, one chord per bar at 70. Am in the pre-chorus is A-C-E, or C-E-A to stay close to C and G.
+\item Drill 7 S3, then S4, on every section. Climb the metronome ladder to 112.
+\item Play the form: intro, verse, pre-chorus, chorus. Chord changes without looking down.
+\item Melody: right hand alone, slower (about 80), phrase by phrase. Then with left-hand roots only, then with the groove.
+\end{enumerate}
+\end{plainbox}
+
+{\footnotesize\textit{Chord charts published online differ in details (sus and add9 chords, chorus turnarounds). Treat these as the skeleton and check against the recording by ear. That is good ear training too.}}
+
+\sect{Progress log \normalfont\small(write the date when you tick a level)}
+\small
+\renewcommand{\arraystretch}{1.55}
+\begin{tabularx}{\linewidth}{@{}l|*{7}{X|}@{}}
+\hline
+\textbf{Drill} & \textbf{L1} & \textbf{L2} & \textbf{L3} & \textbf{L4} & \textbf{L5} & \textbf{L6} & \textbf{L7} \\ \hline
+1 Count the Groove &&&&&&& \\ \hline
+2 The Major Scale &&&&&&& \\ \hline
+3 Chord Staircase &&&&&&& \\ \hline
+4 Lazy Hands &&&&&&& \\ \hline
+5 The Bass Engine &&&&&&& \\ \hline
+6 Broken Chords &&&&&&& \\ \hline
+7 Split the Beat &&&&&&& \\ \hline
+8 Lo-fi Colours &&&&&&& \\ \hline
+9 No Wrong Notes &&&&&&& \\ \hline
+10 Build a Tune &&&&&&& \\ \hline
+11 Big Five Progressions &&&&&&& \\ \hline
+12 Chord Vocabulary &&&&&&& \\ \hline
+\end{tabularx}
+
+\end{document}

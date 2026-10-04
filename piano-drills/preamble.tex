@@ -1,0 +1,153 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,top=11mm,bottom=12mm,left=14mm,right=14mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\newfontfamily\symfont{TeX Gyre Pagella}
+\usepackage{tikz}
+\usepackage{tabularx,array,booktabs,colortbl,multirow,amsmath}
+\usepackage{enumitem}
+\setlist{itemsep=1pt,parsep=0pt,topsep=1pt}
+\usepackage[most]{tcolorbox}
+\usepackage{multicol}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\linespread{1.04}
+
+% ---------- symbols ----------
+\newcommand{\fl}{{\symfont ♭}}
+\newcommand{\sh}{{\symfont ♯}}
+\newcommand{\dimc}{\ensuremath{^{\circ}}}
+\newcommand{\cb}{\tikz[baseline=0.2mm]\draw[line width=0.7pt] (0,0) rectangle (2.8mm,2.8mm);}
+\newcommand{\hit}{\tikz[baseline=-0.6ex]\fill (0,0) circle (1.25mm);}
+\newcommand{\hold}{\tikz[baseline=-0.6ex]\draw[line width=1.2pt] (-1.8mm,0)--(1.8mm,0);}
+\newcommand{\dateline}{\rule[-0.5mm]{14mm}{0.4pt}}
+\newcommand{\tri}{\tikz[baseline=-0.2ex]\fill (0,0)--(2.2mm,0)--(1.1mm,1.9mm)--cycle;}
+\newcommand{\dotk}{\tikz[baseline=-0.6ex]\fill (0,0) circle (1.1mm);}
+
+% ---------- boxes ----------
+\tcbset{
+  base/.style={enhanced, colback=white, colframe=black, boxrule=0.6pt, arc=1.2mm,
+    left=2mm, right=2mm, top=1.2mm, bottom=1.2mm, fonttitle=\bfseries\small,
+    coltitle=black, colbacktitle=black!12, titlerule=0.4pt,
+    toptitle=0.6mm, bottomtitle=0.6mm, before skip=2mm, after skip=2mm},
+}
+\newtcolorbox{why}[1][Why this matters]{base, title={#1}}
+\newtcolorbox{plainbox}[1]{base, title={#1}}
+\newtcolorbox{tipbox}[1][]{base, colback=black!5, boxrule=0pt, frame hidden, #1}
+
+% ---------- page header ----------
+\newcommand{\drillhead}[4]{%
+  \clearpage
+  \noindent
+  \begin{tikzpicture}[baseline=(n.south)]
+    \node[fill=black, text=white, minimum width=17mm, minimum height=17mm,
+      rounded corners=1.5mm, inner sep=0pt,
+      font=\bfseries\fontsize{30}{30}\selectfont] (n) {#1};
+    \node[font=\bfseries\fontsize{6}{6}\selectfont, text=white, anchor=north]
+      at ([yshift=-0.6mm]n.north) {DRILL};
+  \end{tikzpicture}\hspace{4mm}%
+  \begin{minipage}[b]{0.8\linewidth}
+    {\fontsize{20}{23}\selectfont\bfseries #2}\\[0.8mm]
+    {\itshape #3}\\[0.8mm]
+    {\small #4}
+  \end{minipage}\par
+  \vspace{1.2mm}\hrule height 1.2pt\vspace{1.5mm}}
+
+\newcommand{\sheethead}[4]{%
+  \clearpage
+  \noindent
+  \begin{tikzpicture}[baseline=(n.south)]
+    \node[fill=white, draw=black, line width=1.6pt, text=black, minimum width=17mm, minimum height=17mm,
+      rounded corners=1.5mm, inner sep=0pt,
+      font=\bfseries\fontsize{26}{26}\selectfont] (n) {#1};
+    \node[font=\bfseries\fontsize{6}{6}\selectfont, anchor=north]
+      at ([yshift=-0.9mm]n.north) {SHEET};
+  \end{tikzpicture}\hspace{4mm}%
+  \begin{minipage}[b]{0.8\linewidth}
+    {\fontsize{20}{23}\selectfont\bfseries #2}\\[0.8mm]
+    {\itshape #3}\\[0.8mm]
+    {\small #4}
+  \end{minipage}\par
+  \vspace{1.2mm}\hrule height 1.2pt\vspace{1.5mm}}
+\newcommand{\alt}[1]{\textbf{#1}}
+\newcommand{\sect}[1]{\par\vspace{1.4mm}{\bfseries\large #1}\par\vspace{0.6mm}}
+
+% ---------- 5-minute plan ----------
+\newcommand{\tm}[1]{\makebox[19mm][l]{\fbox{\footnotesize\bfseries #1}}}
+\newenvironment{plan}{\begin{list}{}{\leftmargin=21mm\labelwidth=19mm\labelsep=2mm\itemsep=1.2pt\parsep=0pt\topsep=1pt}}{\end{list}}
+\newcommand{\at}[2]{\item[\tm{#1}]\textbf{#2}}
+
+% ---------- level ladder ----------
+\newtcolorbox{ladder}[1][Level ladder --- stay on a level for days or weeks; tick it when you play it clean 3 times in a row]{base, title={#1}, fontupper=\small,
+  before upper app={\renewcommand{\arraystretch}{1.18}},
+  tabularx={@{}c@{\hspace{2mm}}l@{\hspace{2mm}}X@{\hspace{2mm}}r@{\hspace{2mm}}c@{}}}
+\newcommand{\lv}[3]{\cb & \textbf{L#1} & #2 & \footnotesize #3 & \dateline\\}
+
+% ---------- piano keyboard ----------
+% \kbd[scale]{octaves}{marks: semitone/label,...}{roots: semitone,...}
+% semitone 0 = the C at the left edge
+\newcommand{\kbd}[4][0.3]{%
+\begin{tikzpicture}[x=#1cm,y=#1cm]
+  \pgfmathtruncatemacro\nw{7*#2-1}
+  \foreach \i in {0,...,\nw} {\draw[line width=0.45pt] (\i,0) rectangle ++(1,4.6);}
+  \draw[line width=0.45pt] (7*#2,0) rectangle ++(1,4.6);
+  \foreach \o in {1,...,#2} {\foreach \b in {1,2,4,5,6} {
+     \fill ({7*(\o-1)+\b-0.32},1.75) rectangle ++(0.64,2.85);}}
+  \foreach \s/\l in {#3} {
+    \pgfmathtruncatemacro\r{mod(\s,12)}
+    \pgfmathtruncatemacro\o{int(\s/12)}
+    \pgfmathtruncatemacro\w{{0,0,1,1,2,3,3,4,4,5,5,6}[\r]}
+    \pgfmathtruncatemacro\bk{{0,1,0,1,0,0,1,0,1,0,1,0}[\r]}
+    \ifnum\bk=0
+      \fill (7*\o+\w+0.5,0.85) circle (0.43);
+      \node[text=white,font=\bfseries\fontsize{7}{7}\selectfont] at (7*\o+\w+0.5,0.85) {\l};
+    \else
+      \fill[white] (7*\o+\w+1,2.35) circle (0.3);
+      \node[text=black,font=\bfseries\fontsize{6}{6}\selectfont] at (7*\o+\w+1,2.35) {\l};
+    \fi
+  }
+  \foreach \s in {#4} {
+    \pgfmathtruncatemacro\r{mod(\s,12)}
+    \pgfmathtruncatemacro\o{int(\s/12)}
+    \pgfmathtruncatemacro\w{{0,0,1,1,2,3,3,4,4,5,5,6}[\r]}
+    \pgfmathtruncatemacro\bk{{0,1,0,1,0,0,1,0,1,0,1,0}[\r]}
+    \pgfmathsetmacro\xx{\bk==0 ? 7*\o+\w+0.5 : 7*\o+\w+1}
+    \fill (\xx-0.4,-0.95)--(\xx+0.4,-0.95)--(\xx,-0.25)--cycle;
+  }
+\end{tikzpicture}}
+
+% ---------- rhythm grid ----------
+% \grid{label}{8 cells}  cells: x = hit, - = hold, . = rest
+\newcolumntype{G}{>{\centering\arraybackslash}p{5.2mm}}
+\newcommand{\gcell}[1]{\if x#1\hit\else\if -#1\hold\else\if L#1\textbf{L}\else\if R#1\textbf{R}\else\if B#1\textbf{B}\else\textcolor{black!40}{·}\fi\fi\fi\fi\fi}
+\newcommand{\grow}[9]{#1 & \gcell#2 & \gcell#3 & \gcell#4 & \gcell#5 & \gcell#6 & \gcell#7 & \gcell#8 & \gcell#9}
+
+% ---------- windowed keyboard: \kbdw[scale]{first white key}{n white keys}{marks}{roots}
+\newcommand{\kbdw}[5][0.3]{%
+\begin{tikzpicture}[x=#1cm,y=#1cm]
+  \pgfmathtruncatemacro\ka{#2}\pgfmathtruncatemacro\kb{#2+#3-1}\pgfmathtruncatemacro\kc{#2+#3-2}
+  \foreach \i in {\ka,...,\kb} {\draw[line width=0.45pt] (\i,0) rectangle ++(1,4.6);}
+  \foreach \i in {\ka,...,\kc} {
+    \pgfmathtruncatemacro\m{mod(\i,7)}
+    \ifnum\m=2 \else\ifnum\m=6 \else \fill (\i+1-0.32,1.75) rectangle ++(0.64,2.85);\fi\fi}
+  \foreach \s/\l in {#4} {
+    \pgfmathtruncatemacro\r{mod(\s,12)}
+    \pgfmathtruncatemacro\oc{int(\s/12)}
+    \pgfmathtruncatemacro\w{{0,0,1,1,2,3,3,4,4,5,5,6}[\r]}
+    \pgfmathtruncatemacro\bk{{0,1,0,1,0,0,1,0,1,0,1,0}[\r]}
+    \ifnum\bk=0
+      \fill (7*\oc+\w+0.5,0.85) circle (0.43);
+      \node[text=white,font=\bfseries\fontsize{7}{7}\selectfont] at (7*\oc+\w+0.5,0.85) {\l};
+    \else
+      \node[fill=white,draw=black,line width=0.3pt,rounded corners=0.6pt,inner sep=0.5pt,text=black,font=\bfseries\fontsize{6}{6}\selectfont] at (7*\oc+\w+1,2.35) {\l};
+    \fi}
+  \foreach \s in {#5} {
+    \pgfmathtruncatemacro\r{mod(\s,12)}
+    \pgfmathtruncatemacro\oc{int(\s/12)}
+    \pgfmathtruncatemacro\w{{0,0,1,1,2,3,3,4,4,5,5,6}[\r]}
+    \pgfmathtruncatemacro\bk{{0,1,0,1,0,0,1,0,1,0,1,0}[\r]}
+    \pgfmathsetmacro\xx{\bk==0 ? 7*\oc+\w+0.5 : 7*\oc+\w+1}
+    \fill (\xx-0.4,-0.95)--(\xx+0.4,-0.95)--(\xx,-0.25)--cycle;}
+\end{tikzpicture}}
+\newcommand{\chordkey}[5]{\begin{minipage}[t]{0.19\linewidth}\centering\textbf{#1}\\[0.6mm]\kbdw[0.33]{#2}{7}{#3}{#4}\\[-0.3mm]{\footnotesize #5}\end{minipage}}
