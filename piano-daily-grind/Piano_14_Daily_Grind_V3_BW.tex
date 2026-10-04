@@ -1,0 +1,572 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=9.5mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{musixtex}
+\usepackage{tikz}
+\usepackage{amssymb}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2pt}
+\setlist[itemize]{leftmargin=4.5mm,itemsep=.4pt,topsep=.4pt}
+\definecolor{accent}{HTML}{000000}
+\definecolor{soft}{HTML}{FFFFFF}
+\definecolor{warm}{HTML}{FFFFFF}
+\definecolor{green}{HTML}{FFFFFF}
+\definecolor{blue}{HTML}{FFFFFF}
+\definecolor{linegray}{HTML}{000000}
+\newtcolorbox{softbox}[1][]{colback=white,colframe=black,boxrule=.35pt,leftrule=1.0pt,arc=0mm,left=2.2mm,right=2.2mm,top=1.2mm,bottom=1.2mm,before skip=1.2mm,after skip=1.2mm,fontupper=\small,#1}
+\newtcolorbox{warmbox}[1][]{colback=white,colframe=black,boxrule=.35pt,leftrule=1.6pt,arc=0mm,left=2.2mm,right=2.2mm,top=1.2mm,bottom=1.2mm,before skip=1.2mm,after skip=1.2mm,fontupper=\small,#1}
+\newtcolorbox{greenbox}[1][]{colback=white,colframe=black,boxrule=.65pt,arc=0mm,left=2.2mm,right=2.2mm,top=1.2mm,bottom=1.2mm,before skip=1.2mm,after skip=1.2mm,fontupper=\small,#1}
+\newtcolorbox{bluebox}[1][]{colback=white,colframe=black,boxrule=.35pt,leftrule=1.6pt,arc=0mm,left=2.2mm,right=2.2mm,top=1.2mm,bottom=1.2mm,before skip=1.2mm,after skip=1.2mm,fontupper=\small,#1}
+\newtcolorbox{theoryframe}[1][]{colback=white,colframe=black,boxrule=.35pt,leftrule=2.0pt,arc=0mm,left=2mm,right=2mm,top=1.0mm,bottom=1.0mm,before skip=.8mm,after skip=.8mm,fontupper=\small,#1}
+\newtcolorbox{variationframe}[1][]{colback=white,colframe=black,boxrule=.35pt,arc=0mm,left=2mm,right=2mm,top=1.0mm,bottom=1.0mm,before skip=.8mm,after skip=.8mm,fontupper=\small,#1}
+\newcommand{\stationheader}[4]{%
+  \begin{minipage}[t]{0.77\textwidth}
+    {\fontsize{17}{18}\selectfont\bfseries #1}\par
+    \vspace{.2mm}{\large\bfseries #2}\par
+    \vspace{.2mm}{\small #3}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.19\textwidth}\raggedleft
+    {\bfseries STATION #4/14}\par\vspace{.25mm}{\scriptsize A4 / B\&W LASER}\par
+    \vspace{.8mm}\fbox{\rule{0pt}{3.5mm}\hspace{1.4mm}\bfseries GRIND IT\hspace{1.4mm}}
+  \end{minipage}
+  \vspace{1.2mm}\hrule height .7pt\vspace{1.4mm}
+}
+\newcommand{\sectiontitle}[1]{\vspace{.2mm}{\large\bfseries #1}\par\vspace{.25mm}}
+\newcommand{\corebox}[1]{\begin{softbox}\textbf{CORE LOOP:} #1\end{softbox}}
+\newcommand{\ladderbox}[1]{\begin{warmbox}\textbf{DIFFICULTY LADDER:} #1\end{warmbox}}
+\newcommand{\creativebox}[1]{\begin{bluebox}\textbf{CREATIVE MODE:} #1\end{bluebox}}
+\newcommand{\movebox}[1]{\begin{greenbox}\textbf{MOVE ON WHEN:} #1\end{greenbox}}
+\newcommand{\returnline}[1]{\vspace{.5mm}{\footnotesize\textbf{COME BACK WHEN:} #1}\par}
+\newcommand{\tempoline}{\textbf{Tempo ladder:} 50 $\rightarrow$ 60 $\rightarrow$ 70 $\rightarrow$ 80 BPM. Only increase after 3 clean loops.}
+\newcommand{\fourchords}[4]{%
+\begin{center}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{0.96\textwidth}{>{\centering\arraybackslash\bfseries}X|>{\centering\arraybackslash\bfseries}X|>{\centering\arraybackslash\bfseries}X|>{\centering\arraybackslash\bfseries}X}
+#1 & #2 & #3 & #4
+\end{tabularx}\end{center}}
+\newcommand{\smallscorestart}[1]{\parindent0mm\instrumentnumber{1}\setstaffs1{#1}}
+\newcommand{\choicebox}[1]{\fbox{\rule{0pt}{3.5mm}\hspace{1mm}#1\hspace{1mm}}}
+\newcommand{\nn}[1]{\zchar{9}{\scriptsize\bfseries #1}}
+\newcommand{\nns}[1]{\zchar{9}{\tiny\bfseries #1}}
+\newcommand{\twoconcepts}[2]{%
+\begin{minipage}[t]{0.492\textwidth}\begin{theoryframe}\textbf{THEORY / WHY IT WORKS}\par #1\end{theoryframe}\end{minipage}\hfill
+\begin{minipage}[t]{0.492\textwidth}\begin{variationframe}\textbf{VARIATION DECK}\par #2\end{variationframe}\end{minipage}\par}
+\newcommand{\twopractice}[2]{%
+\begin{minipage}[t]{0.492\textwidth}\begin{variationframe}\textbf{5-MINUTE SESSION}\par #1\end{variationframe}\end{minipage}\hfill
+\begin{minipage}[t]{0.492\textwidth}\begin{variationframe}\textbf{COMMON TRAPS / SELF-CHECK}\par #2\end{variationframe}\end{minipage}\par}
+\newcommand{\transferbox}[1]{\begin{softbox}\textbf{TRANSFER TEST - MAKE IT MUSIC}\par #1\end{softbox}}
+
+
+\begin{document}
+
+% ================================================================
+% 1
+\stationheader{Pulse Lock}{Train the clock that everything else sits on}{Two hands, one clock. Wrong pitches can recover; a collapsed pulse cannot.}{1}
+\corebox{LH repeats C3-G2-C3-G2 as quarter notes. RH plays the written 4-bar C-position line. Loop continuously for 60-90 seconds. If RH misses, skip that note and re-enter without stopping LH.}
+
+\begin{music}
+\smallscorestart{2}\setclef{1}{60}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\Notes\nn{C}\qu{3}\nn{G}\qu{0}\nn{C}\qu{3}\nn{G}\qu{0}|\nn{C}\qu{-2}\nn{D}\qu{-1}\nn{E}\qu{0}\nn{G}\qu{2}\en\bar
+\Notes\nn{C}\qu{3}\nn{G}\qu{0}\nn{C}\qu{3}\nn{G}\qu{0}|\nn{F}\hu{1}\nn{E}\qu{0}\nn{D}\qu{-1}\en\bar
+\Notes\nn{C}\qu{3}\nn{G}\qu{0}\nn{C}\qu{3}\nn{G}\qu{0}|\nn{C}\qu{-2}\nn{E}\qu{0}\nn{G}\qu{2}\nn{E}\qu{0}\en\bar
+\Notes\nn{C}\qu{3}\nn{G}\qu{0}\nn{C}\qu{3}\nn{G}\qu{0}|\nn{D}\qu{-1}\nn{D}\qu{-1}\nn{C}\hu{-2}\en
+\setdoubleBAR\zendextract
+\end{music}
+
+\sectiontitle{Grind rules}
+\begin{softbox}
+\textbf{RH position:} 1=C4, 2=D4, 3=E4, 4=F4, 5=G4. Count \textbf{1 2 3 4}; later subdivide aloud \textbf{1 \& 2 \& 3 \& 4 \&}. Tap your foot on the numbered beats.\par
+\textbf{Non-negotiable:} if you get lost, LH keeps moving. Re-enter RH on beat 1 of the next bar. \textbf{Note letters are temporary support:} all notes are labeled in Stations 1--3, labels fade in 4--6, and disappear from 7 onward.
+\end{softbox}
+
+\ladderbox{\textbf{L1} LH alone for 8 bars. \textbf{L2} add RH. \textbf{L3} look at staff more than hands. \textbf{L4} deliberately omit one RH note and recover. \textbf{L5} LH eighths: C-C-G-G-C-C-G-G. \textbf{L6} metronome only on beats 2 and 4; keep your internal 1 and 3. \par \tempoline}
+
+\creativebox{Keep the LH clock and improvise RH using only C-D-E-G. First one note per beat; then add rests. Make a 4-bar question and a 4-bar answer. Repeat one idea instead of filling every beat.}
+\twoconcepts{\textbf{Pulse} is the steady clock; notes can happen on it, between it, or not at all. In 4/4, count four quarter-note beats per bar. Eighth-note subdivisions are \textbf{1 \& 2 \& 3 \& 4 \&}. A rest removes a note, not the underlying beat.}{Try one per session: \textbf{A)} accent beat 1; \textbf{B)} accent 2 and 4; \textbf{C)} RH rests for one whole bar, then re-enters on beat 1; \textbf{D)} metronome only on 2 and 4; \textbf{E)} deliberately make one RH error and practise recovery.}
+\twopractice{\textbf{0:00-0:30} count + tap; \textbf{0:30-1:30} LH only; \textbf{1:30-3:00} both hands; \textbf{3:00-4:00} deliberate-error recovery; \textbf{4:00-5:00} RH improv while LH never stops.}{Watch for: speeding up after a mistake; restarting instead of recovering; LH accent changing whenever RH changes; looking down so long that you lose the bar. Test: can you say the count while both hands play?}
+\transferbox{Put on a plain metronome or simple 4/4 drum loop at 60-70 BPM. Play 16 bars: LH clock + a RH melody using only C-D-E-G. \(\square\) no restart \quad \(\square\) count remains clear \quad \(\square\) at least one deliberate RH rest/re-entry.}
+\movebox{You can play 90 seconds at 70 BPM without a pulse break, including after at least one RH mistake.}
+\returnline{a mistake in one hand makes the other hand freeze, or you cannot count 1 \& 2 \& 3 \& 4 \& while playing.}
+\newpage
+% ================================================================
+% 2
+\stationheader{Scale-Degree Engine}{Turn scales into a map you can move between keys}{The goal is not speed. The goal is knowing where ``home'', 3, 5 and the neighboring notes live.}{2}
+\corebox{Choose one key family. Play one octave up/down RH, then LH, then contrary motion. First pass: say note names. Second pass: say scale degrees 1-2-3-4-5-6-7-1. Finish with a melody made from degrees, not random notes.}
+
+\sectiontitle{First key families}
+\begin{center}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{0.97\textwidth}{>{\bfseries}p{24mm}|X|X}
+Family & Major & Relative natural minor\\\hline
+0 sharps/flats & C D E F G A B C & A B C D E F G A\\
+1 sharp & G A B C D E F\# G & E F\# G A B C D E\\
+1 flat & F G A Bb C D E F & D E F G A Bb C D
+\end{tabularx}\end{center}
+
+\sectiontitle{C-major map: notes and degrees}
+\begin{music}
+\smallscorestart{1}\setclef1{0}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\Notes\nns{C/1}\qu{-2}\nns{D/2}\qu{-1}\nns{E/3}\qu{0}\nns{F/4}\qu{1}\en\bar
+\Notes\nns{G/5}\qu{2}\nns{A/6}\qu{3}\nns{B/7}\qu{4}\nns{C/1}\qu{5}\en\bar
+\Notes\nns{C/1}\qu{5}\nns{B/7}\qu{4}\nns{A/6}\qu{3}\nns{G/5}\qu{2}\en\bar
+\Notes\nns{F/4}\qu{1}\nns{E/3}\qu{0}\nns{D/2}\qu{-1}\nns{C/1}\qu{-2}\en
+\setdoubleBAR\zendextract
+\end{music}
+\begin{softbox}
+\textbf{RH C/G/A minor/E minor up:} 1-2-3-1-2-3-4-5; down: 5-4-3-2-1-3-2-1. \textbf{LH up:} 5-4-3-2-1-3-2-1; down: 1-2-3-1-2-3-4-5. For F major RH use 1-2-3-4-1-2-3-4. Keep crossings relaxed.
+\end{softbox}
+
+\ladderbox{\textbf{L1} quarters. \textbf{L2} eighths. \textbf{L3} contrary motion. \textbf{L4} scale in 3-note cells (1-2-3, 2-3-4...). \textbf{L5} 1-2-3-5 cells in every position. \textbf{L6} play the same degree idea, e.g. \textbf{1-3-5-4}, in C, G and F without writing new notes. \par \tempoline}
+
+\creativebox{Choose a degree recipe: \choicebox{1-2-3-5} \choicebox{3-2-1} \choicebox{5-3-2-1} \choicebox{1-3-2-5}. Turn it into a 2-bar melody, then move the same recipe to another key family.}
+\twoconcepts{A major scale is a fixed interval recipe: \textbf{W-W-H-W-W-W-H}. A relative natural minor uses the same notes but treats a different note as degree 1. For writing, degrees matter: \textbf{1} feels home, \textbf{3} strongly colors major/minor, \textbf{5} is stable, and \textbf{7} often pulls toward 1.}{Beyond straight up/down: \textbf{A)} 1-2-3-5, 2-3-4-6, etc.; \textbf{B)} 1-3-2-4-3-5...; \textbf{C)} 5-4-3-2-1 then answer 1-2-3-5; \textbf{D)} play the same degree recipe in C, G and F; \textbf{E)} stop randomly and instantly name degrees 1, 3 and 5.}
+\twopractice{One key family only: \textbf{1 min} note names; \textbf{1 min} scale degrees; \textbf{1 min} 3-note/1-2-3-5 cells; \textbf{1 min} same degree recipe in another key; \textbf{1 min} tiny melody ending on 1.}{Do not chase BPM before the fingering is even. Check every key-signature note aloud before starting. If the thumb crossing produces a bump, slow down until the hand stays level and relaxed.}
+\transferbox{Invent one degree motif, e.g. 1-3-5-4-3. Play it in C major, G major and F major without rewriting it as letters first. \(\square\) same contour in all keys \quad \(\square\) correct accidental \quad \(\square\) resolves to the new 1.}
+\movebox{C/A minor are automatic, G/E minor do not stall at F\#, and you can translate a short degree pattern into at least two keys.}
+\returnline{you forget a key signature, hesitate at thumb crossings, or cannot tell which note is scale degree 3 or 5. After moving on, maintain with 2 clean passes of one family 2--3 times per week.}
+\newpage
+% ================================================================
+% 3
+\stationheader{Interval + Contour Reflexes}{Make distances and melodic shape feel physical}{You are training the geometry that chords and memorable melody both use.}{3}
+\corebox{Pick a starting note. Play and say: step (2nd), 3rd, 4th, 5th, octave. Then alternate minor 3rd = 3 semitones and major 3rd = 4. Finish by making a 5-note line and describing its contour: up, down, step, leap.}
+
+\sectiontitle{Reference shapes from C}
+\begin{music}
+\smallscorestart{1}\setclef1{0}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\NOtes\nns{C-D}\zqu{-2}\qu{-1}\en\NOtes\nns{C-E}\zqu{-2}\qu{0}\en\NOtes\nns{C-F}\zqu{-2}\qu{1}\en\NOtes\nns{C-G}\zqu{-2}\qu{2}\en\bar
+\Notes\nns{C-C}\zhu{-2}\hu{5}\en\bar
+\Notes\nns{C-Eb}\zhu{-2}\fl{0}\hu{0}\en\bar
+\Notes\nns{C-E}\zhu{-2}\hu{0}\en
+\setdoubleBAR\zendextract
+\end{music}
+\begin{softbox}
+From C: C-D = 2nd, C-E = 3rd, C-F = 4th, C-G = 5th, C-C = octave. For chord quality: C-Eb = minor 3rd; C-E = major 3rd. Count semitones only until the shape becomes automatic.
+\end{softbox}
+
+\sectiontitle{Contour rule to grind}
+\begin{warmbox}
+Play a short line that is \textbf{mostly steps}. Add exactly one leap of a 4th or 5th. After the leap, try moving by step in the \textbf{opposite direction}. Then repeat with the peak note in a different place. Hear the difference between a deliberate shape and wandering.
+\end{warmbox}
+
+\ladderbox{\textbf{L1} look and count. \textbf{L2} produce interval within 3 seconds. \textbf{L3} close eyes after finding start. \textbf{L4} hear target interval internally before playing. \textbf{L5} random 5-note melody: name each move as step / 3rd / 4th-5th / larger. \textbf{L6} make arc, rising and falling contours on demand.}
+
+\creativebox{Make three 4-bar melodies from the same five scale notes: \textbf{A)} mostly rising, \textbf{B)} mostly falling, \textbf{C)} an arc with one unique high note. Keep rhythm similar so you can hear contour itself.}
+\twoconcepts{An interval number counts letter names: C-E is some kind of 3rd; C-G is a 5th. Semitones tell quality: \textbf{m3=3}, \textbf{M3=4}, \textbf{P4=5}, \textbf{P5=7}. Melody contour is the larger path made by those distances.}{\textbf{A)} same interval upward and downward; \textbf{B)} random starting roots C-D-E-F-G-A; \textbf{C)} sing the target before playing; \textbf{D)} make a 5-note line with exactly one leap; \textbf{E)} move the unique peak to bar 1, 2, 3, then 4 and compare the feeling.}
+\twopractice{Pick 4 starting notes. From each: 2nd, 3rd, 4th, 5th. Then alternate m3/M3 ten times. Finish with three 5-note contours: rising, falling, arc. Sing one before playing it.}{If every interval requires counting keys, stay here. If every melody leaps, force four steps for every one leap. If the phrase has no obvious highest or lowest moment, deliberately choose one.}
+\transferbox{Take any tiny melody you already know by ear. Play 4-8 notes and classify every move: repeat / step / 3rd / 4th-5th / larger. Then change exactly one interval and listen to how the phrase character changes.}
+\movebox{You can produce m3, M3 and 5th from C, D, E and A quickly, and you can intentionally create a stepwise line with one controlled leap.}
+\returnline{you keep counting keys to build chords, or your melodies feel directionless because every interval is chosen independently.}
+\newpage
+% ================================================================
+% 4
+\stationheader{Triad Machine}{Build major/minor chords and inversions until they become hand shapes}{This is your chord vocabulary gym, not a one-time theory lesson.}{4}
+\corebox{Pick one root. Build major triad = root + M3 + m3; minor triad = root + m3 + M3. Play root position, 1st inversion, 2nd inversion, then back down. LH plays the root; RH plays the triad.}
+
+\sectiontitle{Example: C major and A minor}
+\begin{music}
+\smallscorestart{2}\setclef{1}{60}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\NOtes\nn{C}\wh{3}|\nns{C-E-G}\zwh{-2}\zwh{0}\wh{2}\en\bar
+\NOtes\nn{C}\wh{3}|\nns{E-G-C}\zwh{0}\zwh{2}\wh{5}\en\bar
+\NOtes\nn{C}\wh{3}|\nns{G-C-E}\zwh{2}\zwh{5}\wh{7}\en\bar
+\NOtes\nn{A}\wh{1}|\nns{A-C-E}\zwh{-3}\zwh{-1}\wh{1}\en
+\setdoubleBAR\zendextract
+\end{music}
+
+\sectiontitle{Roots to rotate through}
+\fourchords{C / Am}{G / Em}{F / Dm}{D / Bm}
+\begin{softbox}
+For each root: \textbf{major, minor, root position, 1st inversion, 2nd inversion}. Say the chord name while you play it. Do not rush through all roots; grind one pair until the hand shape is reliable, then add another pair.
+\end{softbox}
+
+\ladderbox{\textbf{L1} one chord every 4 beats. \textbf{L2} every 2 beats. \textbf{L3} one chord per beat. \textbf{L4} random order called from a list. \textbf{L5} eyes closed for one inversion cycle. \textbf{L6} arpeggiate each chord bottom-middle-top-middle.}
+
+\creativebox{Choose any 2 triads and alternate them for 8 bars. RH top note becomes a tiny melody: change only the top note when possible while preserving the chord. This trains chord playing and melody awareness at the same time.}
+\twoconcepts{A triad is three chord tones stacked in thirds. Major = \textbf{M3 then m3}; minor = \textbf{m3 then M3}. Inversions keep the same chord tones but place a different chord tone at the bottom, which is why they are crucial for smooth accompaniment.}{For every chord do four textures: \textbf{block}; \textbf{1-3-5-3 broken}; \textbf{bottom-middle-top-middle}; \textbf{hold chord but repeat only top note}. Then use a shuffled root list and give yourself 3 seconds to build the requested major/minor inversion.}
+\twopractice{Choose one pair, e.g. C/Am. \textbf{1 min} spell notes; \textbf{1 min} inversion cycles; \textbf{1 min} block vs broken; \textbf{1 min} random calls; \textbf{1 min} use both chords in a loop.}{Avoid collapsing fingers or twisting the wrist to reach inversions. Do not treat every inversion as a new chord to memorize: identify the same three pitch names in a new order.}
+\transferbox{Choose C-Am-F-G. Before playing, spell each chord aloud. Then play the loop three ways: all roots, all 1st inversions where possible, then any inversion that keeps RH nearest. The third pass should feel easiest physically.}
+\movebox{You can build C, Am, F, G, Em, Dm and their common inversions without counting semitones from scratch.}
+\returnline{you know a chord name but cannot find it quickly, or chord changes require large hand jumps.}
+
+\newpage
+% ================================================================
+% 5
+\stationheader{Voice-Leading Chord Grind}{Make progressions feel like connected motion, not separate hand puzzles}{Preserve common tones and move the other voices the smallest practical distance.}{5}
+\corebox{Choose one 4-chord loop. LH plays roots. RH finds the nearest inversion of each next chord. Before moving, identify any common tone and try to keep that finger down. Loop for 2 minutes without stopping.}
+
+\sectiontitle{Progression bank}
+\begin{center}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{0.96\textwidth}{>{\bfseries}p{26mm}|X|X}
+C/A minor & C - Am - F - G & Am - F - C - G\\
+G/E minor & G - D - Em - C & Em - C - G - D\\
+F/D minor & F - C - Dm - Bb & Dm - Bb - F - C
+\end{tabularx}\end{center}
+
+\sectiontitle{Smooth C - Am - F - G model}
+\begin{music}
+\smallscorestart{2}\setclef{1}{60}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\NOtes\nn{C}\wh{3}|\nns{C}\zwh{-2}\zwh{0}\wh{2}\en\bar
+\NOtes\nn{A}\wh{1}|\nns{Am}\zwh{-2}\zwh{0}\wh{3}\en\bar
+\NOtes\wh{-1}|\zwh{-2}\zwh{1}\wh{3}\en\bar
+\NOtes\nn{G}\wh{0}|\nns{G}\zwh{-3}\zwh{-1}\wh{2}\en
+\setdoubleBAR\zendextract
+\end{music}
+
+\sectiontitle{Three passes over the same loop}
+\begin{softbox}
+\textbf{Pass 1 - freeze:} hold common tones physically while other fingers move.\par
+\textbf{Pass 2 - minimize:} if a voice can move by 1--2 semitones instead of jumping, choose the smaller move.\par
+\textbf{Pass 3 - top line:} notice the highest note of every chord and make it move mostly by step.
+\end{softbox}
+
+\ladderbox{\textbf{L1} chord every 4 beats. \textbf{L2} every 2 beats. \textbf{L3} every beat. \textbf{L4} change progression without pausing. \textbf{L5} RH smooth chords while LH root-fifth quarters. \textbf{L6} choose a desired top-note line first, then find inversions that support it. \par \tempoline}
+
+\creativebox{Play the same progression twice: first all root positions, then closest inversions. Record both. Listen specifically for \textbf{horizontal motion} in each RH voice rather than judging only the chord names.}
+\twoconcepts{Chord spelling is vertical; \textbf{voice leading} is horizontal. Imagine each RH note as its own tiny melody. Smooth changes usually preserve common tones and move remaining voices by the smallest practical interval.}{\textbf{A)} freeze every common tone; \textbf{B)} keep the top note unchanged across two chords when possible; \textbf{C)} force the top voice to descend stepwise; \textbf{D)} force it to rise; \textbf{E)} compare ``root positions only'' against ``nearest inversions'' on a recording.}
+\twopractice{Play the loop twice in root position. Then four times using nearest inversions. Next, play only the RH top notes as a melody. Final minute: full loop again while listening specifically to that top line.}{If all three RH fingers jump together, you are missing the point. Look for notes that can stay. If the top voice makes a big jump, test another inversion before accepting it.}
+\transferbox{Choose a progression and design a 4-note top line first (one top note per chord). Now find inversions underneath those notes. This reverses the usual process: melody choice guides voicing choice.}
+\movebox{You can loop all three progression families at 70 BPM with no searching, preserve common tones, and avoid unnecessary RH jumps.}
+\returnline{chord changes sound choppy, your RH travels large distances, or you cannot hear a top voice moving through the progression.}
+\newpage
+% ================================================================
+% 6
+\stationheader{Left-Hand Engines}{Build accompaniment patterns that can run almost automatically}{Your LH becomes the machine; your RH is then free for chords or melody.}{6}
+\corebox{Pick one progression from Station 5. Hold simple RH chords. Cycle the LH through the four patterns below. Do not change pattern until it can run for 8 bars without conscious effort.}
+
+\sectiontitle{Four reusable engines}
+\begin{center}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{0.97\textwidth}{>{\bfseries}p{28mm}|X|X}
+Pattern & One bar on C & Use\\\hline
+A. Root & C2 (whole note) & maximum space\\
+B. Root-fifth & C2 - G2 - C2 - G2 & simple pop/electronic\\
+C. 1-5-8-5 & C2 - G2 - C3 - G2 & ballad engine\\
+D. Eighth pulse & C C G G C C G G & driving slow-pop pulse
+\end{tabularx}\end{center}
+
+\begin{music}
+\smallscorestart{2}\setclef{1}{60}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\Notes\nn{C}\qu{-4}\nn{G}\qu{0}\nn{C}\qu{3}\nn{G}\qu{0}|\nns{C}\zwh{-2}\zwh{0}\wh{2}\en\bar
+\Notes\nn{A}\qu{1}\qu{5}\qu{8}\qu{5}|\nns{Am}\zwh{-2}\zwh{0}\wh{3}\en\bar
+\Notes\nn{F}\qu{-1}\qu{3}\qu{6}\qu{3}|\nns{F}\zwh{-2}\zwh{1}\wh{3}\en\bar
+\Notes\nn{G}\qu{0}\qu{4}\qu{7}\qu{4}|\nns{G}\zwh{-3}\zwh{-1}\wh{2}\en
+\setdoubleBAR\zendextract
+\end{music}
+
+\ladderbox{\textbf{L1} pattern A on one chord. \textbf{L2} one progression. \textbf{L3} pattern C across all chords. \textbf{L4} eighth pulse. \textbf{L5} switch A->C->D every 4 bars while keeping tempo. \textbf{L6} LH quieter than RH. \par \tempoline}
+
+\creativebox{Same progression, three moods: \textbf{sparse} = root only; \textbf{ballad} = 1-5-8-5; \textbf{driving} = eighth pulse. Record 20 seconds of each. You are building an accompaniment vocabulary you can reuse in your own arrangements.}
+\twoconcepts{An accompaniment is not the chord progression itself; it is a \textbf{rhythmic + registral treatment} of the harmony. The same four chords can feel sparse, intimate, driving or dramatic simply because the LH engine changes.}{On each progression try: \textbf{A)} whole-note root; \textbf{B)} root-fifth; \textbf{C)} 1-5-8-5; \textbf{D)} 1-8-5-8; \textbf{E)} eighth-note pulse. Then repeat each one \emph{very soft}, normal, and accented only on beat 1.}
+\twopractice{Choose one progression. Give each LH engine 4 bars: root, root-fifth, 1-5-8-5, eighth pulse. Spend the final minute adding a simple RH top note while keeping the chosen engine automatic.}{LH should usually be quieter than RH melody. Do not restart the pattern at every chord change; the rhythmic engine should continue through harmony changes like a drum groove.}
+\transferbox{Take one 4-chord loop and perform 8 bars each as \textbf{sparse}, \textbf{ballad}, and \textbf{driving}. Do not change the chord order. If the mood clearly changes anyway, your accompaniment vocabulary is working.}
+\movebox{Pattern C and D can run for 16 bars while RH changes chords without dragging the LH off time.}
+\returnline{your RH change makes LH hesitate, or your accompaniment becomes louder than the melody.}
+
+\newpage
+% ================================================================
+% 7
+\stationheader{Rhythm Independence + Syncopation}{Keep one hand stable while the other creates rhythmic character}{The clock stays fixed; phrasing can move on, between and around the beats.}{7}
+\corebox{LH runs a Station 6 pattern on C-Am-F-G. RH starts with one pitch and cycles through rhythm cells. Only after the rhythm is secure do you add C-E-G or scale notes. LH must remain unchanged.}
+
+\sectiontitle{RH rhythm cells}
+\begin{center}\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{0.97\textwidth}{>{\bfseries}p{22mm}|X|X}
+Cell & Count / shape & Job\\\hline
+1 & 1 2 3 4 & straight quarters\\
+2 & 1 (hold) 3 4 & long-short contrast\\
+3 & 1 \& 2, then hold & eighth-note pickup\\
+4 & rest on 1, enter on 2 & delayed entrance\\
+5 & enter on ``\&'' & simple syncopation\\
+6 & 3+3+2 eighths & accents on 1, \& of 2, 4
+\end{tabularx}\end{center}
+
+\begin{music}
+\smallscorestart{1}\setclef1{0}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\Notes\qu{-2}\qu{0}\qu{2}\qu{0}\en\bar
+\Notes\hu{-2}\qu{0}\qu{2}\en\bar
+\Notes\cu{-2}\cu{0}\qu{2}\hu{0}\en\bar
+\Notes\qp\qu{-2}\qu{0}\qu{2}\en
+\setdoubleBAR\zendextract
+\end{music}
+
+\ladderbox{\textbf{L1} clap RH cell while LH plays. \textbf{L2} one RH pitch. \textbf{L3} C-E-G pitches. \textbf{L4} switch cells every bar. \textbf{L5} deliberately enter on offbeats. \textbf{L6} 3+3+2 accents while LH remains four-square. \textbf{L7} improvise rhythm freely without losing the bar line.}
+
+\creativebox{Take one 3-note pitch idea and make four melodies by changing \textbf{only rhythm}. Then keep one rhythm cell and make four pitch versions. Finish with 8 bars where bars 1--4 are straight and 5--8 become more syncopated.}
+\twoconcepts{\textbf{Syncopation} works only because the listener still feels the underlying beat while attacks move away from it. For 3+3+2, keep counting eight eighth notes; the accents regroup them without changing the 4/4 bar.}{Before using pitches, clap these over a steady LH: \textbf{A)} all on-beats; \textbf{B)} all ``ands''; \textbf{C)} rest beat 1; \textbf{D)} 3+3+2 accents; \textbf{E)} alternate straight bar / syncopated bar. Then reuse exactly the same rhythm with three different pitch sets.}
+\twopractice{\textbf{1 min} clap cells over foot pulse; \textbf{1 min} one RH pitch over LH; \textbf{1 min} 3 pitches; \textbf{1 min} alternate straight/syncopated bars; \textbf{1 min} free rhythm with continuous count.}{Syncopation is not rushing or dragging. If you cannot still tap 1-2-3-4, simplify. A RH rest is active time: keep counting through it instead of mentally pausing.}
+\transferbox{Use a simple drum loop. LH stays straight; RH plays two bars straight, two bars offbeat, two bars 3+3+2, then two bars freely. The drum loop must never feel like it moved - only your phrasing did.}
+\movebox{You can use rests and offbeat entries while LH stays steady, and you can feel where beat 1 is even after syncopation.}
+\returnline{both hands collapse into the same rhythm, an offbeat makes you lose the bar, or a RH rest causes LH to stop.}
+\newpage
+% ================================================================
+% 8
+\stationheader{Motif + Transformation Lab}{Generate many melodies from one tiny idea}{A melody can grow from one or two recognizable motives instead of a stream of unrelated notes.}{8}
+\corebox{Create a 3-5 note, 1-bar motif. Repeat it unchanged twice. Then generate new bars by applying exactly one transformation at a time. Keep the original recognizable.}
+
+\sectiontitle{Starter motif and transformation deck}
+\begin{center}\renewcommand{\arraystretch}{1.07}
+\begin{tabularx}{0.97\textwidth}{>{\bfseries}p{27mm}|X|X}
+Operation & Example idea & What stays the same\\\hline
+Transpose & move whole motif up/down in the scale & interval shape / rhythm\\
+Melodic inversion & each up move becomes down, and vice versa & rhythm / approximate distances\\
+Retrograde & play pitch order backwards & pitch collection\\
+Rhythm mutation & same pitches, new durations/rests & pitch order\\
+Change ending & first notes identical, final note differs & identity + surprise\\
+Truncate & remove last note and leave space & opening identity
+\end{tabularx}\end{center}
+
+\begin{music}
+\smallscorestart{1}\setclef1{0}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\Notes\qu{-3}\qu{-1}\qu{1}\qu{0}\en\bar
+\Notes\qu{-2}\qu{0}\qu{2}\qu{1}\en\bar
+\Notes\qu{1}\qu{-1}\qu{-3}\qu{-2}\en\bar
+\Notes\qu{0}\qu{1}\qu{-1}\qu{-3}\en
+\setdoubleBAR\zendextract
+\end{music}
+\begin{softbox}
+Think of the four bars above as \textbf{idea -> moved idea -> flipped tendency -> reordered answer}. Do not memorize these notes; use the relationship as a model for making your own variants.
+\end{softbox}
+
+\ladderbox{\textbf{L1} motif on one chord. \textbf{L2} repeat-repeat-change ending. \textbf{L3} transpose within the key. \textbf{L4} invert or reverse. \textbf{L5} keep pitches but mutate rhythm. \textbf{L6} 8 bars using only one original motif plus its descendants. \textbf{L7} sing the motif first, then find it.}
+
+\creativebox{Set a 3-minute timer. Generate 6 variants of one motif; do \textbf{not} invent six unrelated motifs. At the end, choose the two strongest and alternate them A-B-A-B' over a chord loop.}
+\twoconcepts{A motif stays recognizable because some identity survives: pitch shape, interval pattern, rhythm, opening gesture, or contour. Strong development usually changes \textbf{one or two properties}, not everything at once.}{Add these cards: \textbf{sequence} (repeat from a new scale degree); \textbf{fragment} (use only first 2-3 notes); \textbf{extend} (add one note); \textbf{compress} (same idea in half the time); \textbf{space} (replace one note with a rest). Build A-A-A'-B, then A-B-A-B'.}
+\twopractice{Sing/find one motif. Repeat it exactly twice. Make four single-change variants. Pick the best two and alternate A-B-A-B'. Final pass: add chords without changing the motif logic.}{Motif too long? Cut it to 3-5 notes. If each variant sounds unrelated, you changed too many properties. If every bar is identical, choose one controlled transformation instead of random noodling.}
+\transferbox{Create an 8-bar melody from one 3-5 note motif. Bars 1-2 establish it; bars 3-6 transform it; bars 7-8 return or answer. Record it. On playback, can you point to the original motif inside at least three later bars?}
+\movebox{You can create an 8-bar phrase from one small motif while preserving recognizable repetition and producing controlled variation.}
+\returnline{your melodies turn into random noodling, or every new bar requires inventing a completely new idea.}
+\newpage
+% ================================================================
+% 9
+\stationheader{Chord-Tone Melody}{Make melody acknowledge every chord change}{Stable targets define the harmony; travel notes create motion between them.}{9}
+\corebox{Loop one 4-chord progression. On beat 1 or 3 of each bar, deliberately hit a chord tone. Between targets, use nearby scale notes. Start with one target per bar; add motion only when you can hear why the target fits.}
+
+\sectiontitle{C - Am - F - G target notes}
+\begin{center}\renewcommand{\arraystretch}{1.06}
+\begin{tabularx}{0.94\textwidth}{>{\bfseries}p{20mm}|X|X}
+Chord & Strong targets & Nearby travel notes\\\hline
+C & C E G & D F A B\\
+Am & A C E & B D F G\\
+F & F A C & G B D E\\
+G & G B D & A C E F
+\end{tabularx}\end{center}
+
+\begin{music}
+\smallscorestart{2}\setclef{1}{60}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\Notes\wh{3}|\qu{-2}\qu{-1}\qu{0}\qu{-1}\en\bar
+\Notes\wh{1}|\qu{3}\qu{2}\qu{0}\qu{-1}\en\bar
+\Notes\wh{-1}|\qu{1}\qu{2}\qu{3}\qu{1}\en\bar
+\Notes\wh{0}|\qu{2}\qu{1}\qu{-1}\qu{-2}\en
+\setdoubleBAR\zendextract
+\end{music}
+
+\sectiontitle{Target drills}
+\begin{softbox}
+\textbf{Root pass:} target only roots. \textbf{Third pass:} target only 3rds. \textbf{Fifth pass:} target only 5ths. \textbf{Nearest-tone pass:} from your previous melody note, choose the closest chord tone when harmony changes. Hear how the chord change can pull the melody somewhere specific.
+\end{softbox}
+
+\ladderbox{\textbf{L1} 1 target per bar. \textbf{L2} 2 notes per bar. \textbf{L3} quarter-note line. \textbf{L4} one eighth-note pair per bar. \textbf{L5} target 3rds on strong beats. \textbf{L6} target nearest chord tone instead of always roots. \textbf{L7} repeat in G/E minor and F/D minor.}
+
+\creativebox{Create one 4-bar rhythm first. Keep that rhythm fixed while making three pitch versions: roots, 3rds, then nearest chord tones. Compare how much harmonic character changes without changing the rhythm.}
+\twoconcepts{Chord tones feel comparatively stable over their chord. Non-chord scale tones can connect them. The \textbf{3rd} is especially useful because it reveals major/minor quality; the nearest available chord tone often produces smoother melodic motion than jumping to every root.}{Run five target passes: \textbf{root}; \textbf{third}; \textbf{fifth}; \textbf{nearest chord tone}; \textbf{approach target from one scale step above/below}. Then delay one expected target until beat 2 and hear the extra tension.}
+\twopractice{One fixed chord loop: root-target pass, third-target pass, nearest-target pass. Then keep one rhythm and compare those three pitch strategies. Finish with 8 bars of free melody that still lands deliberately.}{Do not force a note on every subdivision. If melody jumps at every chord change, choose the nearest target. If the harmony is hard to hear, target thirds more often before adding travel notes.}
+\transferbox{Loop Am-F-C-G and improvise 8 bars. First time, land mostly on roots; second, mostly on thirds; third, nearest chord tones. Record all three. Decide which pass sounds most like a melody rather than a chord-spelling exercise.}
+\movebox{You can improvise 8 bars and deliberately explain why each strong target fits the chord under it.}
+\returnline{your melody sounds acceptable over a static chord but becomes awkward exactly at chord changes.}
+\newpage
+% ================================================================
+% 10
+\stationheader{Contour + Tension Lab}{Shape a phrase, create instability, then resolve it}{Expressive melody comes from direction, focal points, tension and release - not simply more notes.}{10}
+\corebox{Build a 4-bar line that is mostly stepwise, contains one deliberate leap, and has one unique high note. Then add one non-chord tension that resolves by step. Repeat with the peak and tension in different bars.}
+
+\sectiontitle{Four tension formulas in C major}
+\begin{center}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{0.96\textwidth}{>{\bfseries}p{27mm}|X|X}
+Tool & Over C chord & What to hear\\\hline
+Passing note & C-D-E & travel between stable notes\\
+Neighbor note & E-F-E & leave and return\\
+Suspension-like move & D-C or F-E & tension resolving down\\
+Approach note & D-E or F-E & aim at target by step
+\end{tabularx}\end{center}
+
+\begin{music}
+\smallscorestart{1}\setclef1{0}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\Notes\qu{-2}\qu{-1}\hu{0}\en\bar
+\Notes\qu{0}\qu{1}\hu{0}\en\bar
+\Notes\hu{-1}\hu{-2}\en\bar
+\Notes\qu{-1}\qu{0}\hu{0}\en
+\setdoubleBAR\zendextract
+\end{music}
+
+\sectiontitle{Phrase-shape constraints}
+\begin{softbox}
+\textbf{Mostly steps.} If you leap up, try stepping back down afterward. \textbf{One peak.} Let the highest note happen once, not constantly. \textbf{Space.} At least one beat of rest in every 2 bars. \textbf{Resolution.} Be able to point to the unstable note and the note that releases it.
+\end{softbox}
+
+\ladderbox{\textbf{L1} formulas on C. \textbf{L2} move to Am, F, G. \textbf{L3} one leap + opposite-direction step. \textbf{L4} unique peak note. \textbf{L5} one tension/release per 4 bars. \textbf{L6} delay resolution with a rest. \textbf{L7} combine contour + chord-tone targets from Station 9.}
+
+\creativebox{Make two versions of the same 4-bar skeleton. Version A = chord tones only. Version B = same main targets, but add one passing note, one neighbor and one delayed resolution. The goal is \textbf{clearer expression, not more density}.}
+\twoconcepts{Tension is contextual: a note may belong to the key yet still feel unstable against the current chord. A phrase becomes easier to hear when it has a contour, a focal high/low point, and a clear release rather than constant motion.}{Keep the same chords and make: \textbf{A)} rising phrase; \textbf{B)} falling phrase; \textbf{C)} arc; \textbf{D)} one large leap then step back; \textbf{E)} question ending away from 1, answer ending on 1; \textbf{F)} same targets but insert a rest before resolution.}
+\twopractice{Make a chord-tone skeleton first. Add one peak. Add one leap. Add one tension + stepwise release. Add one rest before a resolution. Last pass: remove anything that weakens the phrase.}{More notes do not equal more expression. Watch for multiple competing peak notes, tension that never resolves, or a melody that climbs/falls for too long without counter-motion.}
+\transferbox{Make a 4-bar question and 4-bar answer. Reuse the same opening motif, but move the peak, alter one ending, and resolve the final phrase more strongly to degree 1 or a chord tone.}
+\movebox{You can intentionally create a phrase with a clear contour, one focal high point, and at least two tension/release gestures you can hear and explain.}
+\returnline{your melodies are in key but flat, or extra notes appear without any directional or resolving purpose.}
+\newpage
+% ================================================================
+% 11
+\stationheader{Ballad Piano Texture}{Grind the coordination used by repeating emotional pop piano}{Steady accompaniment, compact voicings, a singing top line and clean pedal.}{11}
+\corebox{Choose F/D minor or G/E minor. LH plays a continuous broken/eighth-note pattern. RH holds compact chords first, then adds a simple top line. Repeat 8-16 bars without stopping and change pedal only with harmony.}
+
+\sectiontitle{F/D minor loop for practice}
+\fourchords{Dm}{Bb}{F}{C}
+\begin{center}\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{0.96\textwidth}{>{\bfseries}p{28mm}|X|X}
+Level & LH job & RH job\\\hline
+A & roots, whole notes & compact chords\\
+B & 1-5-8-5 quarters & compact chords\\
+C & eighth-note root/5th pulse & chord on beats 1 and 3\\
+D & same LH & top-note melody + 1-2 quiet inner tones
+\end{tabularx}\end{center}
+
+\sectiontitle{Suspension color}
+\begin{music}
+\smallscorestart{2}\setclef{1}{60}\generalmeter{\meterfrac44}\generalsignature{-1}\nobarnumbers\startextract
+\NOtes\wh{-1}|\zwh{-2}\zwh{1}\wh{2}\en\bar
+\NOtes\wh{-1}|\zwh{-2}\zwh{1}\wh{3}\en\bar
+\NOtes\wh{-1}|\zwh{-2}\zwh{1}\wh{2}\en\bar
+\NOtes\wh{-1}|\zwh{-2}\zwh{0}\wh{2}\en
+\setdoubleBAR\zendextract
+\end{music}
+\begin{softbox}
+Keep lower tones still and move one upper note by step to create/release color. Use light pedal: release/re-press at chord changes. \textbf{Reference drill:} listen to 20 seconds of a piano song you like, focus only on the LH behavior, then reproduce the \emph{type} of motion with this original chord loop - never the song's notes.
+\end{softbox}
+
+\ladderbox{\textbf{L1} 8 bars no pedal. \textbf{L2} pedal per chord. \textbf{L3} LH eighths. \textbf{L4} RH melody louder than accompaniment. \textbf{L5} 16 bars with a dynamic arc. \textbf{L6} change harmonic rhythm: hold each chord 2 bars, then 1 bar. \textbf{L7} transpose texture to Em-C-G-D.}
+
+\creativebox{Play the same loop as \textbf{verse} (sparse, low, quiet) and \textbf{chorus} (fuller, higher, stronger). Switch every 8 bars without stopping; change texture before changing notes.}
+\twoconcepts{Ballad texture is a hierarchy: steady LH motion underneath, compact harmony in the middle, melody on top. Pedal supports legato but cannot repair muddy harmony. A practical rule: play the new chord, then quickly refresh the pedal so old harmony does not smear into it.}{Use the same Dm-Bb-F-C loop but vary one layer: \textbf{A)} chord lasts 2 bars; \textbf{B)} 1 bar; \textbf{C)} top note repeats; \textbf{D)} top note steps upward; \textbf{E)} verse one octave lower/softer, chorus higher/stronger; \textbf{F)} remove pedal and prove fingers can still connect the line.}
+\twopractice{\textbf{1 min} pattern without pedal; \textbf{1 min} clean pedal per chord; \textbf{1 min} top melody louder; \textbf{1 min} quiet verse texture; \textbf{1 min} fuller chorus texture without stopping.}{Pedal should not blur two harmonies together. If everything is equally loud, the melody disappears. If LH eighths wobble during RH changes, return to Station 6 before adding pedal.}
+\transferbox{Perform a 16-bar original ballad: 8-bar verse = lower/softer/sparser; 8-bar chorus = higher/fuller/stronger. Keep chord vocabulary simple. The contrast should come primarily from texture, register, dynamics and harmonic rhythm.}
+\movebox{You can maintain 16 bars of continuous LH motion, clean pedal changes, smooth voicings and a clearly louder melody.}
+\returnline{slow pop textures fall apart when LH repeats quickly, pedal gets muddy, or the melody disappears inside the harmony.}
+\newpage
+% ================================================================
+% 12
+\stationheader{Lo-fi Piano Texture}{Use richer harmony, repetition and space without advanced jazz vocabulary}{Seventh chords supply color; restraint and controlled variation keep the loop musical.}{12}
+\corebox{Loop Cmaj7-Am7-Dm7-G7. LH plays roots. RH plays compact 3-note shells. Repeat four bars \textbf{unchanged} enough times to hear the identity, then alter exactly one parameter: top note, rhythm, density or register.}
+
+\sectiontitle{Compact shapes}
+\fourchords{Cmaj7: E-G-B}{Am7: C-E-G}{Dm7: F-A-C}{G7: F-B-D}
+\begin{music}
+\smallscorestart{2}\setclef{1}{60}\generalmeter{\meterfrac44}\generalsignature{0}\nobarnumbers\startextract
+\NOtes\wh{3}|\zwh{0}\zwh{2}\wh{4}\en\bar
+\NOtes\wh{1}|\zwh{-2}\zwh{0}\wh{2}\en\bar
+\NOtes\wh{-3}|\zwh{1}\zwh{3}\wh{5}\en\bar
+\NOtes\wh{0}|\zwh{1}\zwh{4}\wh{6}\en
+\setdoubleBAR\zendextract
+\end{music}
+
+\sectiontitle{Loop mutation rules}
+\begin{softbox}
+Loops 1--4: \textbf{identical}. Loop 5: change only the top note. Loop 6: return to original. Loop 7: change only rhythm. Loop 8: return again. This trains \textbf{repetition -> expectation -> controlled surprise}. Leave at least one full beat of silence every 2 bars.
+\end{softbox}
+
+\ladderbox{\textbf{L1} shapes only. \textbf{L2} root + shape. \textbf{L3} broken RH. \textbf{L4} top-note melody. \textbf{L5} passing notes between top notes. \textbf{L6} offbeat chord attacks while LH stays steady. \textbf{L7} 8 loops with only one property changed at a time.}
+
+\creativebox{Use a plain piano sound first. Make three 8-bar versions: \textbf{minimal}, \textbf{melodic}, \textbf{syncopated}. Only after the notes/rhythm work should you imagine production choices such as filtering, saturation or a drum loop.}
+\twoconcepts{A 7th chord is a triad plus another third. When LH already supplies the root, RH can use a compact \textbf{shell} without duplicating it. That leaves space for a top melody and usually reduces low-mid mud.}{Across Cmaj7-Am7-Dm7-G7 try: \textbf{A)} same top note where possible; \textbf{B)} descending top line; \textbf{C)} chord attacks only on ``and'' of 2; \textbf{D)} remove one inner tone; \textbf{E)} top-note neighbor motion; \textbf{F)} one entire beat of silence every bar.}
+\twopractice{Loop shells unchanged four times. On loop 5 alter only top note; return original. Loop 7 alter only rhythm; return original. Final minute: sparse top melody with at least one beat of silence per bar.}{Low duplicated roots and heavy pedal create mud quickly. Do not ``improve'' every repetition; listeners need the unchanged loop to learn its identity before variation has meaning.}
+\transferbox{Make a 16-bar lo-fi loop: first 8 bars establish Cmaj7-Am7-Dm7-G7 with strong repetition; second 8 bars alter only top-line rhythm or register. Leave deliberate silence. Do not add production effects until the piano idea works alone.}
+\movebox{You can loop the 7th chords, keep lower tones soft, make a clear top line, and create variation without abandoning the loop's identity.}
+\returnline{richer harmony becomes dense/muddy, or every repeat changes so much that no recognizable loop forms.}
+\newpage
+% ================================================================
+% 13
+\stationheader{Repetition + Harmonic Rhythm Generator}{Learn how the same idea changes when chords, texture and density move at different speeds}{Do not rewrite everything. Change one dimension and listen to what that dimension does.}{13}
+\corebox{Choose one 4-chord loop and one 1-2 bar motif. First repeat them plainly. Then vary \textbf{harmonic rhythm} - how often chords change - while keeping the surface pattern recognizable. After that, change texture one parameter at a time.}
+
+\sectiontitle{Harmonic-rhythm passes}
+\begin{center}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{0.97\textwidth}{>{\bfseries}p{30mm}|X|X}
+Pass & Chord speed & Keep constant\\\hline
+A. Spacious & one chord / 2 bars & motif + LH pattern\\
+B. Normal & one chord / bar & motif + LH pattern\\
+C. Urgent & two chords / bar & same basic motif rhythm\\
+D. Contrast & A for 8 bars -> B for 8 & pitches largely unchanged
+\end{tabularx}\end{center}
+
+\sectiontitle{Texture passes}
+\begin{center}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{0.97\textwidth}{>{\bfseries}p{24mm}|X|X}
+Mode & LH & RH\\\hline
+Sparse & root per bar & melody / occasional chord\\
+Pop & root-fifth quarters & compact chord + top melody\\
+Ballad & 1-5-8-5/eighths & melody + quiet inner tones\\
+Lo-fi & root / occasional fifth & 7th shell + spaced top line
+\end{tabularx}\end{center}
+
+\begin{softbox}
+\textbf{Repetition discipline:} play 4 bars exactly the same before modifying anything. On the next 4 bars change \textbf{one} feature only: chord-change speed, register, density, rhythm or top note. If everything changes, you learn nothing about what caused the effect.
+\end{softbox}
+
+\ladderbox{\textbf{L1} harmonic passes A/B. \textbf{L2} add C. \textbf{L3} same motif in two textures. \textbf{L4} A section = slow harmony; B = faster harmony. \textbf{L5} repeat 4 bars identically then mutate one property. \textbf{L6} return to original after the variation. \textbf{L7} perform A-B-A without stopping.}
+
+\creativebox{Record two takes using exactly the same chord order and motif. In Take 1 change only harmonic rhythm; in Take 2 change only texture. Ask: \textbf{which change created urgency, space, lift or intimacy?} Build an ear-to-arrangement vocabulary.}
+\twoconcepts{\textbf{Harmonic rhythm} is chord-change speed; \textbf{surface rhythm} is the speed of individual notes. They are independent. Fast arpeggios can sit on one chord for two bars, while slow quarter notes can accompany a chord change every beat.}{Build a 3x3 experiment: chord speed = \textbf{2 bars / 1 bar / half-bar}; texture = \textbf{sparse / ballad / lo-fi}. Keep the motif fixed through all nine combinations. Label what you hear: \textbf{space, urgency, stasis, lift, forward pull, intimacy}.}
+\twopractice{Keep one motif + chord order. Play harmonic rhythm at 2 bars/chord, 1 bar/chord, half-bar/chord. Then keep chord speed fixed and run sparse, ballad and lo-fi textures. Name the emotional effect after each pass.}{If you change harmony speed, motif, voicing and texture together, you cannot learn what caused the effect. Always establish a repeated baseline first, then change one variable.}
+\transferbox{Create A and B sections with the \textbf{same chord order and same motif}. For B, change only harmonic rhythm + one texture parameter. If B feels different without new musical material, you have learned arrangement rather than replacement.}
+\movebox{You can make the same musical material feel clearly different by manipulating chord-change speed or texture while preserving its identity.}
+\returnline{every section change requires new chords and a new melody, or your loops never establish enough repetition for variation to matter.}
+\newpage
+% ================================================================
+% 14
+\stationheader{Daily Song Lab}{A forever station: turn technical skills into original music every session}{Use constraints, plain sound, active listening and one-change-at-a-time review.}{14}
+\corebox{Set 10-15 minutes. Build a fresh 8-bar sketch, perform it once without stopping, then change only one weak element. Next session make another sketch or re-arrange an old one. This page is never ``completed''.}
+
+\sectiontitle{1. Borrow attributes, not notes}
+\begin{softbox}
+Optional 60-second start: listen actively to a short reference and write \textbf{three descriptors only}, for example: ``slow chord changes / narrow melody / repeating eighth-note LH.'' Close the reference. Build original notes using those attributes. Use a plain piano sound while writing so the musical idea must work without production hiding it.
+\end{softbox}
+
+\sectiontitle{2. Pick today's constraints}
+\begin{center}\renewcommand{\arraystretch}{1.06}
+\begin{tabularx}{0.97\textwidth}{>{\bfseries}p{23mm}|X}
+Key & C/A minor, G/E minor, or F/D minor\\
+Progression & any Station 5 loop; choose harmonic rhythm too\\
+LH engine & root, root-fifth, 1-5-8-5, eighth pulse\\
+Melody rule & 3 notes / repeated motif / delayed entrance / one leap / one peak\\
+Variation rule & transpose / change ending / rhythm mutation / tension-release\\
+Form & A A A' B, A A' B A, or 8-bar loop + one variation
+\end{tabularx}\end{center}
+
+\sectiontitle{3. Ten-minute loop}
+\begin{softbox}
+\textbf{0-2 HARMONY} - loop until hands stop searching.\par
+\textbf{2-4 GROOVE} - choose LH engine; do not decorate yet.\par
+\textbf{4-7 MOTIF} - make one idea, repeat it, then transform it.\par
+\textbf{7-9 ARRANGE} - choose register, density, dynamics and harmonic rhythm for contrast.\par
+\textbf{9-10 ONE TAKE} - perform without stopping. Capture it if possible; wrong notes are evidence, not a reason to restart.
+\end{softbox}
+
+\sectiontitle{4. One-fix review}
+\begin{center}\renewcommand{\arraystretch}{1.04}
+\begin{tabularx}{0.96\textwidth}{>{\bfseries}p{30mm}|X}
+Pulse & stayed steady?\\
+Harmony & changes smooth and intentional?\\
+Melody & recognizable motif and contour?\\
+Balance & melody clearer than accompaniment?\\
+Variation & changed one thing without losing identity?\\
+Form & B/variation felt different enough?
+\end{tabularx}\end{center}
+Choose \textbf{one} weak row. One more take fixes only that. Then stop.
+
+\ladderbox{\textbf{L1} 8 bars. \textbf{L2} 16 bars with A/B contrast. \textbf{L3} second arrangement of yesterday's sketch. \textbf{L4} transpose the degree/motif idea. \textbf{L5} start from melody instead of chords. \textbf{L6} recreate a sketch from memory. \textbf{L7} use three reference attributes but completely original notes.}
+
+\twoconcepts{Constraints reduce decision load. ``Three melody notes'', ``one leap'', or ``one repeated motif'' are not limitations to overcome; they create a small search space where you can actually hear cause and effect. Your one-fix review keeps creation and editing from becoming the same activity.}{Repair map: pulse breaks $\rightarrow$ Stations \textbf{1/7}; scales/key feel vague $\rightarrow$ \textbf{2/3}; chords slow or clunky $\rightarrow$ \textbf{4/5}; LH freezes $\rightarrow$ \textbf{6/7}; melody wanders $\rightarrow$ \textbf{8-10}; piano texture flat/muddy $\rightarrow$ \textbf{11/12}; sections feel identical $\rightarrow$ \textbf{13}.}
+\begin{variationframe}\textbf{WEEKLY BENCHMARK (5-10 MINUTES, NOT DAILY)}\par Record three no-restart takes: \textbf{A)} one progression with two LH textures; \textbf{B)} one 8-bar melody built from a repeated motif; \textbf{C)} one fresh 8-bar song-lab sketch. Compare to last week on only four things: pulse stability, chord-change smoothness, motif clarity, and whether melody sits above accompaniment. Pick the weakest link as next week's main station.\end{variationframe}
+\begin{greenbox}\textbf{FOREVER TARGET:} sit down and reliably do: choose key -> progression -> stable accompaniment -> recognizable motif -> melody that follows harmony -> controlled variation -> simple arrangement. When one link feels weak, revisit the station that trains it.\end{greenbox}
+\vspace{.6mm}{\scriptsize\textit{Concept backbone: practical melody/variation, voice-leading and harmonic-rhythm ideas from Dennis DeSantis, \emph{Making Music}; notation/rhythm/scale fundamentals cross-checked against \emph{Open Music Theory}. All drills and notation here are original.}}\par
+\end{document}
