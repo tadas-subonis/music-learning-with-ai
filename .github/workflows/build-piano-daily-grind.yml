@@ -1,0 +1,41 @@
+name: Build piano daily grind PDF
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'piano-daily-grind/**'
+      - '.github/workflows/build-piano-daily-grind.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install TeX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended musixtex
+
+      - name: Build PDF
+        working-directory: piano-daily-grind
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Commit generated PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add piano-daily-grind/Piano_14_Daily_Grind_V3_BW.pdf
+          if git diff --cached --quiet; then
+            echo "PDF unchanged"
+          else
+            git commit -m "Build piano daily grind PDF"
+            git push
+          fi
